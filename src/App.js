@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import tes from "./tes";
+import sesil from "./Pages/sesil";
 
 function App() {
 	return (
 		<div className="App">
-			<tes />
+			<sesil />
 		</div>
 	);
 }
