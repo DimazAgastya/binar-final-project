@@ -5,13 +5,9 @@
     padding: 10px 15px;
 }
 
-.btn:hover {
+.btn:hover, .btn:active, .btn:focus {
     background: #7126B5;
     color: white;
-}
-
-.btn:active {
-    background-color: #351c4d;
 }
 
 @media (max-width: 770px) {

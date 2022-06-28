@@ -2,13 +2,6 @@ h5, p {
     font-size: 14px;
 }
 
-img {
-    width: 165.33px;
-    height: 100px;
-    border-radius: 4px;
-    object-fit: none;
-}
-
 .style-card {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
     border-style: none;
@@ -16,4 +9,7 @@ img {
 
 .style-img {
     border-radius: 13px;
+    width: auto;
+    height: 100px;
+    object-fit: none;
 }

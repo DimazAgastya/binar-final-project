@@ -23,10 +23,13 @@ const EarlyNavbar = () => {
                 
                 {/* SEARCH */}
                 <div className='col-auto mx-4 flex-grow-1'>
+                    <div>
                     <form className="form-inline">
                         <input className="form-control form-search" type="text" placeholder="Search..." aria-label="Search" />
                         {/* <button type="submit"><FiSearch /></button> */}
                     </form>
+                    {/* <button className="icon"><FiSearch /></button> */}
+                    </div>
                 </div>
 
                 {/* MENU */}
