@@ -1,5 +1,4 @@
 import React from "react";
-import "./info.css";
 import ProdukImage from "./ProdukImage";
 import InfoProduk from "./ProdukForm";
 import ProdukButtons from "./ProdukButtons";

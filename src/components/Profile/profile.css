@@ -1,36 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
-
-:root {
-	--header: #000000;
-	--border: #d0d0d0;
-	--primary: #7126b5;
-	--secondary: #ffffff;
+.register_right {
+	margin-left: 30vh;
 }
 
-.profile_header {
+.profile_great_container {
+	margin-bottom: 20px;
+}
+
+.profile_header_lg {
 	font-family: Poppins;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	letter-spacing: 0em;
 	text-align: center;
-	text-transform: capitalize;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
-.dummy_dropzone {
+.profile_photo_section {
+	display: block;
+	margin: 50px auto;
+	margin-bottom: 0px;
+	width: 10%;
+}
+
+.profile_dummy_dropzone {
 	width: 125px;
 	height: 100px;
 	background-color: #d5bced;
-	margin: 50px 0px 0px 90vh;
 	border-radius: 8px;
 }
 
-.register_right {
-	margin-left: 30vh;
+.profile_camera_icon {
+	margin: 35px 0px 50px 7vh;
 }
 
-.input_box_2 {
+.profile_form_container {
+	margin: auto auto auto 40vh;
+}
+
+.profile_input_box_2 {
 	border: 1px solid var(--border);
 	margin-left: 10px;
 	border-radius: 16px;
@@ -41,10 +49,23 @@
 	margin: 35px 0px 50px 7vh;
 }
 
-.input_box,
-.input_box_2,
-.btn_login {
-	width: 80%;
+.profile_input_box {
+	border: 1px solid var(--border);
+	margin-left: 10px;
+	border-radius: 16px;
+	padding: 12px 10px;
+	width: 70%;
+}
+
+.btn_profile_submit {
+	background-color: var(--primary);
+	color: var(--secondary);
+	font-family: Poppins;
+	border: none;
+	padding: 12px 24px 12px 24px;
+	border-radius: 16px;
+	width: 72%;
+	margin-top: 10px;
 }
 
 .footer {
@@ -52,32 +73,27 @@
 }
 
 @media screen and (max-width: 768px) {
-	.login_right {
+	.profile_form_container {
 		margin-left: 20.5px;
 	}
 
-	.arrow_svg {
+	.profile_arrow_svg {
 		margin: 52px 60px 0px 10.5px;
 	}
 
 	.profile_header_sm {
 		margin: 52px 0px;
-		font-family: Poppins;
-		font-size: 14px;
-		font-weight: 300;
-		line-height: 20px;
-		letter-spacing: 0em;
 	}
 
-	.dummy_dropzone {
-		width: 125px;
-		height: 100px;
-		background-color: #d5bced;
+	.profile_photo_section {
+		margin: 0px;
+	}
+
+	.profile_dummy_dropzone {
 		margin: 10px 0px 0px 20vh;
-		border-radius: 8px;
 	}
 
-	.camera_icon {
+	.profile_camera_icon {
 		margin: 35px 0px 50px 7vh;
 	}
 
@@ -85,60 +101,16 @@
 		margin-left: 2vh;
 	}
 
-	label {
-		font-size: 12px;
-		font-weight: 400;
-		line-height: 18px;
-		letter-spacing: 0em;
-		text-align: left;
-		margin: 10px 0px;
+	.profile_label {
+		margin-left: 20px;
 	}
 
-	.input_box {
-		border: 1px solid var(--border);
-		margin-left: 10px;
-		border-radius: 16px;
-		padding: 12px 10px;
+	.profile_input_box {
 		width: 87%;
 	}
 
-	.input_box_2 {
-		border: 1px solid var(--border);
-		margin-left: 10px;
-		border-radius: 16px;
-		padding: 20px 16px;
-		width: 87%;
-	}
-	.btn_login {
-		background-color: var(--primary);
-		color: var(--secondary);
-		font-family: Poppins;
-		border: none;
-		padding: 12px 24px 12px 24px;
-		border-radius: 16px;
-		width: 87%;
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-
-	.footer {
-		text-align: center;
-		margin: 100px 35px 0px 0px;
-	}
-
-	.footer > a {
-		text-decoration: none;
-	}
-
-	.daftar {
-		text-decoration: none;
-		margin-left: 5px;
-		color: var(--primary);
-		font-size: 14px;
-		font-weight: 700;
-		line-height: 20px;
-		letter-spacing: 0em;
-		text-align: left;
-		text-transform: capitalize;
+	.btn_profile_submit {
+		width: 90%;
+		margin: 30px 0px;
 	}
 }

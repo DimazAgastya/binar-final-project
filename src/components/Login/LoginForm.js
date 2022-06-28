@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const LoginForm = () => {
 	return (
-		<div className="register_right col-12 col-lg-4">
+		<div className="login_right col-12 col-lg-4">
 			<h2>Masuk</h2>
 			<form className="login_form">
 				<label className="login_label" htmlFor="nama">

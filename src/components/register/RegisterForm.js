@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const RegisterForm = () => {
 	return (
-		<div className="register_right col-12 col-lg-4 m">
-			<h2>Daftar</h2>
+		<div className="register_form_container register_right col-12 col-lg-4 m">
+			<h2 className="">Daftar</h2>
 			<form className="register_form">
 				<label className="register_label" htmlFor="nama">
 					Nama

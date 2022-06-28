@@ -22,6 +22,10 @@
 	height: auto;
 }
 
+.login_right {
+	margin-left: 30vh;
+}
+
 .login_right > h2 {
 	font-family: Poppins;
 	color: var(--header);
@@ -61,7 +65,7 @@ label {
 	padding: 12px 24px;
 	color: var(--secondary);
 	border: none;
-	width: 100%;
+	width: 102%;
 }
 
 .footer > p {

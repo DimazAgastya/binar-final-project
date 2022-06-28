@@ -8,7 +8,7 @@ const profile = () => {
 	// setting dropzone
 
 	return (
-		<div className="container-fluid login_container ">
+		<div className="container-fluid profile_great_container">
 			<section>
 				<Header />
 			</section>

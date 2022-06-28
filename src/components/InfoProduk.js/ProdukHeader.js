@@ -1,5 +1,5 @@
 import React from "react";
-import "./info.css";
+import "./infoProduk.css";
 
 const ProdukHeader = () => {
 	return (
@@ -7,7 +7,7 @@ const ProdukHeader = () => {
 			<img
 				src="/SVG/arrow_left.svg"
 				alt="arrow icon"
-				className=" arrow-svg
+				className=" infoProduk_arrow
         "
 			/>
 			<div className="">

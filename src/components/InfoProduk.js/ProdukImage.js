@@ -1,11 +1,10 @@
 import React from "react";
-import "./info.css";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
 const ProdukImage = () => {
 	return (
-		<div className="picture_place">
-			<AiOutlinePlusCircle className="produk_icon" />
+		<div className="infoProduk_img">
+			<AiOutlinePlusCircle className="infoProduk_icon" />
 		</div>
 	);
 };
