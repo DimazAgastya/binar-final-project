@@ -3,7 +3,7 @@ import "./daftarJual.css";
 
 const CardGroup = () => {
 	return (
-		<div className="card_container">
+		<div className="seller_card_container">
 			<div class="row ">
 				<div class="col-5 col-lg-4 mb-3">
 					<div class="card rounded">

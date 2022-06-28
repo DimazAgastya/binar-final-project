@@ -142,7 +142,7 @@
 /*=========  caategory end  ==========*/
 /*=========  cardGroup start  ==========*/
 
-.card_container {
+.seller_card_container {
 	border-radius: 4px;
 	width: 100%;
 	margin-top: 20px;
@@ -209,6 +209,9 @@
 	/*=========  bio seller end  ==========*/
 	/*=========  swiper start  ==========*/
 
+	.btn_swiperGroup {
+		margin-bottom: 20px;
+	}
 	.btn_swiper {
 		background-color: var(--primary);
 		color: var(--secondary);
@@ -226,11 +229,11 @@
 		margin-left: 10px;
 	}
 
-	.card_container {
+	.seller_card_container {
 		width: 100%;
 		margin-top: 50px;
 		border-radius: 16px;
-		margin-right: 20px;
+		margin: 20px;
 		cursor: pointer;
 	}
 
