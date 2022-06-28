@@ -1,5 +1,5 @@
 import React from "react";
-import AccountPage from "../components/EditingAccount/account";
+import AccountPage from "../Components/EditingAccount/account";
 
 const Account = () => {
 	return (

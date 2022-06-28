@@ -1,5 +1,5 @@
 import React from "react";
-import InfoProdukPage from "../components/InfoProduk.js/InfoProduk";
+import InfoProdukPage from "../Components/InfoProduk.js/InfoProduk";
 
 const InfoProduk = () => {
 	return (
