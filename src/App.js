@@ -1,13 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
-import sesil from "./Pages/sesil";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from "./Pages/Home/Home";
+import List from "./Pages/List/List";
+import Notif from "./Pages/Notif/Notif";
+import Profile from "./Pages/Profile/Profile";
+import NavbarLogin from "./components/NavbarLogin/NavbarLogin";
+
+export default function App() {
 	return (
-		<div className="App">
-			<sesil />
-		</div>
+		<BrowserRouter>
+			<NavbarLogin />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/list" element={<List />} />
+				<Route path="/notification" element={<Notif />} />
+				<Route path="/profile" element={<Profile />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
-
-export default App;
