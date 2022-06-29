@@ -1,17 +1,31 @@
 .btn {
-    background: #E2D4F0;
-    border-radius: 12px;
-    font-size: 13px;
-    padding: 10px 15px;
+	background: #e2d4f0;
+	border-radius: 12px;
+	font-size: 13px;
+	padding: 10px 15px;
 }
 
-.btn:hover, .btn:active, .btn:focus {
-    background: #7126B5;
-    color: white;
+.container-inner {
+	flex-wrap: nowrap;
+}
+
+.card_container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	gap: 10px;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+	background: #7126b5;
+	color: white;
 }
 
 @media (max-width: 770px) {
-    .fi {
-        display: none;
-    }
+	.fi {
+		display: none;
+	}
 }

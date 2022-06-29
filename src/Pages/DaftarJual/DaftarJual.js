@@ -1,5 +1,5 @@
 import React from "react";
-import DaftarJualPage from "../../components/SellerDaftarJual/SellerJual";
+import DaftarJualPage from "../../Components/SellerDaftarJual/SellerJual";
 
 const DaftarJual = () => {
 	return (
