@@ -1,0 +1,5 @@
+to do sampe kamis : 
+
+- login
+- register
+- react-dropzone
