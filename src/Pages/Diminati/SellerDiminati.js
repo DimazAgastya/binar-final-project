@@ -1,10 +1,10 @@
 import React from "react";
-import DaftarJualPage from "../../Components/SellerDaftarJual/SellerJual";
+import BarangDiminati from "../../Components/SellerDaftarJual/Diminati/BarangDiminati";
 
 const DaftarJual = () => {
 	return (
 		<div>
-			<DaftarJualPage />
+			<BarangDiminati />
 		</div>
 	);
 };
