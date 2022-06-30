@@ -39,20 +39,3 @@ const daftarJual = () => {
 };
 
 export default daftarJual;
-
-/*
-
-
-<div className="profile ">
-					<div className="row">
-						<div className="image_position col-6"></div>
-						<div className="col-6 seller_bio">
-							<h6 className="">Nama Penjual</h6>
-							<p>Kota</p>
-						</div>
-					</div>
-				</div>
-				<button className="btn_seller_bio">Edit</button>
-
-
-*/
