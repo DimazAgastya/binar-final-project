@@ -118,9 +118,13 @@
 	margin-bottom: 20px;
 }
 
-.category_text {
+.category_text1 {
 	margin: 3px 0px 0px 15px;
-	/* color: var(--primary); */
+	color: var(--primary);
+}
+
+.category_text2 {
+	margin: 3px 0px 0px 15px;
 }
 
 .icon_right {
@@ -138,7 +142,7 @@
 /*=========  caategory end  ==========*/
 /*=========  cardGroup start  ==========*/
 
-.card_container {
+.seller_card_container {
 	border-radius: 4px;
 	width: 100%;
 	margin-top: 20px;
@@ -205,19 +209,17 @@
 	/*=========  bio seller end  ==========*/
 	/*=========  swiper start  ==========*/
 
+	.btn_swiperGroup {
+		margin-bottom: 20px;
+	}
 	.btn_swiper {
-		background-color: #E2D4F0;;
-		color: var(--header);
+		background-color: var(--primary);
+		color: var(--secondary);
 		border: none;
 		padding: 12px 38px;
 		border-radius: 16px;
 		font-size: 14px;
 		margin: 20px 15px 0px -10px;
-	}
-
-	.btn_swiper:hover, .btn_swiper:focus, .btn_swiper:active {
-		background-color: var(--primary);
-		color: var(--secondary);
 	}
 
 	/*=========  swiper end  ==========*/
@@ -227,12 +229,11 @@
 		margin-left: 10px;
 	}
 
-	.card_container {
+	.seller_card_container {
 		width: 100%;
-		margin: 50px 20px;
-		/* margin-top: 50px; */
+		margin-top: 50px;
 		border-radius: 16px;
-		/* margin-right: 20px; */
+		margin: 20px;
 		cursor: pointer;
 	}
 
@@ -271,15 +272,3 @@
 		margin-left: 125px;
 	}
 }
-
-
-/*=========  interested product start  ==========*/
-
-.box-interested {
-	border-style: none;
-	width: 276px;
-	height: auto;
-	margin: auto;
-}	
-
-/*=========  interested product end  ==========*/
