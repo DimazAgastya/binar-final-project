@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Profilepage from "../../Components/Profile/profile";
 
-const Profile = () => {
-  return (
-    <div className='container'>
-      <h1 className='text-center' style={{paddingTop: "30%"}}>Profile</h1>
-    </div>
-  )
-}
+const profile = () => {
+	return (
+		<div>
+			<Profilepage />
+		</div>
+	);
+};
 
-export default Profile
+export default profile;

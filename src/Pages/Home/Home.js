@@ -1,14 +1,16 @@
-import React from 'react';
-import Slider from '../../Components/Slider/Slider'
-import Category from '../../Components/Category/Category';
+import React from "react";
+import Slider from "../../Components/Slider/Slider";
+import Category from "../../Components/Category/Category";
+import HomeNavbar from "../../Components/NavbarLogin/NavbarLogin";
 
 const Home = () => {
-  return (
-    <>
-      <Slider />
-      <Category />
-    </>
-  )
-}
+	return (
+		<>
+			{/* <HomeNavbar /> */}
+			<Slider />
+			<Category />
+		</>
+	);
+};
 
-export default Home
+export default Home;

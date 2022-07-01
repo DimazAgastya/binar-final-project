@@ -1,0 +1,45 @@
+.box-notifpage {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-notifpage a{
+    text-decoration: none;
+    color: black;
+}
+
+.box-notifpage a:hover {
+    background-color: aliceblue;
+}
+  
+.notifpage {
+    display: flex;
+    flex-direction: row;
+    margin: 12px 0;
+}
+
+.wrapper-img-notif {
+    margin: auto 30px;
+}
+
+.img-notifpage {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+  
+.small-notifpage {
+    font-size: 14px;
+    margin: 5px 0;
+}
+  
+.desc-notifpage {
+    font-size: 15px;
+}
+  
+.time-clock-notifpage {
+    margin-inline-start: auto;
+    margin-inline-end: 20px;
+}
+  

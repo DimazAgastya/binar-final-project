@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import NotifPage from '../../Components/NotifPage/NotifPage';
 
 const Notif = () => {
   return (
-    <div className='container'>
-      <h1 className='text-center' style={{paddingTop: "30%"}}>Notif</h1>
+    <div>
+      <NotifPage />
     </div>
   )
 }

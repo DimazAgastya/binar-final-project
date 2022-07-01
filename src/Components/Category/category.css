@@ -1,17 +1,39 @@
-.btn {
+.btn-cate {
     background: #E2D4F0;
     border-radius: 12px;
     font-size: 13px;
     padding: 10px 15px;
+	border-style: none;
 }
 
-.btn:hover, .btn:active, .btn:focus {
+.btn-cate:hover,  
+.btn-cate:focus {
     background: #7126B5;
     color: white;
+}
+
+.telusur-cate {
+	font-weight: 500;
 }
 
 @media (max-width: 770px) {
     .fi {
         display: none;
     }
+}
+
+.card-home-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+@media (max-width: 1399px) {
+    .card-home-wrapper {
+        justify-content: center;
+    }
+}
+
+.card-home-inner {
+    margin: 1em;
 }
