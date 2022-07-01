@@ -85,6 +85,24 @@ const NavbarLogin = () => {
 														<div className="alerts-notifdrop rounded-circle"></div>
 													</div>
 													</Link>
+
+													<hr className="m-0"/>
+													
+													<Link to='/notification'>
+													<div className="notif1 py-1">
+														<div>
+															<img src="/images/jamCowo.png" alt="" className="img-notif-dropdown" />
+														</div>
+														<div className="text-notif-product">
+															<div className="text-muted small-notifdrop">Penawaran produk</div>
+															<div className="desc-notifdrop">Jam Tangan Casio</div>
+															<div className="desc-notifdrop">Rp 250.000</div>
+															<div className="desc-notifdrop">Ditawar Rp 200.000</div>
+														</div>
+														<p className="text-muted small-notifdrop time-clock">20 Apr, 14:04</p>
+														<div className="alerts-notifdrop rounded-circle"></div>
+													</div>
+													</Link>
 													
 												</div>
 											</div>

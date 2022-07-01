@@ -1,11 +1,18 @@
 import React from 'react';
 import './notifPage.css';
 import { Link } from "react-router-dom";
+import { Row, Col } from "react-bootstrap";
+import { IoArrowBackOutline } from "react-icons/io5";
 
 const NotifPage = () => {
   return (
     <>
     <div className='container align-items-center'>
+      <Row>
+					<a href="/" className="back-notifpage">
+						<IoArrowBackOutline />
+					</a>
+			</Row>
       <div className='px-3 py-4 box-notifpage'>
         <Link to='/infopenawaran'>
           <div className='notifpage py-1'>
@@ -19,6 +26,7 @@ const NotifPage = () => {
 							<div className="desc-notifpage">Ditawar Rp 200.000</div>
 						</div>
 						<p className="text-muted small-notifpage time-clock-notifpage">20 Apr, 14:04</p>
+            <div className="alerts-notifpage rounded-circle"></div>
           </div>
         </Link>
 
@@ -36,6 +44,7 @@ const NotifPage = () => {
 							<div className="desc-notifpage">Ditawar Rp 200.000</div>
 						</div>
 						<p className="text-muted small-notifpage time-clock-notifpage">20 Apr, 14:04</p>
+            <div className="alerts-notifpage rounded-circle"></div>
           </div>
         </Link>
       </div>
