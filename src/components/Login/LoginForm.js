@@ -74,7 +74,6 @@ const LoginForm = () => {
 				});
 			});
 	};
-
 	return (
 		<div className="login_right col-12 col-lg-4">
 			<h2>Masuk</h2>
@@ -98,7 +97,6 @@ const LoginForm = () => {
 					Masuk
 				</button>
 			</form>
-
 			<div className="footer">
 				<p>
 					belum punya akun?
