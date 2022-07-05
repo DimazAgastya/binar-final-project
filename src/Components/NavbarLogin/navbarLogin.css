@@ -1,9 +1,209 @@
+/* ---------------------- NAVBAR BASIC ---------------------- */
+.navbar {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  height: 84px;
+  z-index: 2;
+}
+
+.navbar_wrapper {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+/* ---------------------- NAVBAR BASIC ---------------------- */
+
+
+/* ---------------------- NAVBAR LOGO ---------------------- */
+.navbar_logo {
+  flex: .2;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .logo {
   width: 100px;
   height: auto;
   border-radius: 4px;
 }
+/* ---------------------- NAVBAR LOGO ---------------------- */
 
+/* .navbar__icon {
+  font-size: 30px;
+} */
+
+/* ---------------------- NAVBAR SEARCH ---------------------- */
+.navbar_search {
+  display: flex;
+  align-items: center;
+}
+
+input.search-navbar {
+  background: #EEEEEE;
+  border-radius: 16px;
+  width: 444px;
+  height: 42px;
+  cursor: pointer;
+}
+/* ---------------------- NAVBAR SEARCH ---------------------- */
+
+
+/* ---------------------- NAVBAR MENU DESKTOP ---------------------- */
+.navbar_links {
+  flex: .6;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+
+.navbar_link {
+  list-style: none;
+  cursor: pointer;
+  font-size: 25px;
+  transition: .2s;
+  margin: 0 25px;
+}
+
+.navbar_link:hover,
+.navbar_link:focus {
+  transform: scale(1.25);
+}
+
+.icons-menu {
+  color: black;
+  display: flex;
+}
+
+.icons-menu:focus,
+.icons-menu:hover {
+  color: #7126B5;
+}
+/* ---------------------- NAVBAR MENU DESKTOP ---------------------- */
+
+
+/* ---------------------- DROPDOWN NOTIF ---------------------- */
+.dropdown-notif {
+  z-index: 3;
+}
+
+.dropdown-content-notif {
+display: none;
+position: absolute;
+width: 25vw;
+height: 30vh;
+right: -2.5vw;
+background: #ffffff; 
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+border-radius: 16px;
+
+
+overflow-y: scroll;
+}
+
+.dropdown-content-notif a {
+color: black;
+padding: 1vh;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content-notif a:hover {
+background-color: #f0f0f5;
+}
+
+.dropdown-notif:hover .dropdown-content-notif,
+.dropdown-notif:focus {
+display: block;
+}
+
+.box-notif {
+display: flex;
+flex-direction: column;
+}
+
+.img-notif-dropdown {
+width: 48px;
+height: 48px;
+border-radius: 12px;
+object-fit: cover;
+margin-inline-end: 1vw;
+}
+
+.notif1 {
+display: flex;
+flex-direction: row;
+}
+
+.text-notif-product {
+margin-inline-end: 2rem;
+display: flex;
+flex-direction: column;
+}
+
+.small-notifdrop {
+font-size: x-small;
+padding-bottom: 5px;
+}
+
+.desc-notifdrop {
+font-size: 14px;
+padding-bottom: 3px;
+}
+
+.time-clock {
+margin-inline-start: 3%;
+}
+
+.alerts-notifdrop {
+background-color: #FA2C5A;
+width: 8px;
+height: 8px;
+margin-inline-start: 3%;
+margin-top: 2px;
+margin-left: 10px;
+}
+/* ---------------------- DROPDOWN NOTIF ---------------------- */
+
+
+/* ---------------------- NAVBAR MENU MOBILE ---------------------- */
+.navbar_burger {
+  font-size: 27px;
+  display: none;
+  cursor: pointer;
+  color: black;
+}
+/* ---------------------- NAVBAR MENU MOBILE ---------------------- */
+
+
+/* ---------------------- MEDIA SCREEN ---------------------- */
+@media (max-width: 991px) {
+  .navbar_links {
+      display: none;
+  }
+
+  .navbar_burger {
+      display: block;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  input.search-navbar {
+      width: auto;
+      height: auto;
+  }
+}
+/* --------------- MEDIA SCREEN --------------- */
+
+/* 
 #navlogin {
   background: #FFFFFF;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
@@ -11,26 +211,17 @@
   height: 84px;
 }
 
-.icons-menu {
-  color: black;
-  font-size: larger;
-}
-
-.icons-menu:focus,
-.icons-menu:hover {
-  color: #7126B5;
-}
-
 #navlogin li {
   padding-top: 15px;
   margin: 0 10px;
   font-size: larger;
-}
+} */
 
 /* HAMBURGER MENU */
-.ham-menu {
+/* .ham-menu {
   border-style: none;
   background: none;
+} */
 
   /* position: absolute; */
   /* right: 0; */
@@ -39,7 +230,6 @@
   display: flex;
   justify-content: center;
   align-items: center;   */
-}
 
 /* nav {
   position: fixed;
@@ -84,30 +274,12 @@ nav a:first-of-type{
 
 
 /* SEARCH BAR */
-input.search-navbar {
+/* input.search-navbar {
   background: #EEEEEE;
   border-radius: 16px;
   width: 444px;
   height: 42px;
-}
-
-
-/* MEDIA SCREEN */
-@media (max-width: 770px) {
-  #navlogin {
-    padding-top: 8px;
-    align-items: center;
-  }
-
-  .logo {
-    width: 90px;
-  }
-
-  input.search-navbar {
-      width: auto;
-      height: auto;
-  }
-}
+} */
 
 /* .container-search{
   overflow: hidden;
@@ -165,86 +337,3 @@ input.search-navbar {
 
 
 /* DROPDOWN NOTIF */
-.dropdown-notif {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content-notif {
-  display: none;
-  position: absolute;
-  width: 25vw;
-  height: 30vh;
-  right: -2.5vw;
-  background: #ffffff; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 16px;
-  z-index: 999;
-
-  overflow-y: scroll;
-}
-
-.dropdown-content-notif a {
-  color: black;
-  padding: 1vh;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content-notif a:hover {
-  background-color: #f0f0f5;
-}
-
-.dropdown-notif:hover .dropdown-content-notif,
-.dropdown-notif:focus {
-  display: block;
-}
-
-.box-notif {
-  display: flex;
-  flex-direction: column;
-}
-
-.img-notif-dropdown {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  object-fit: cover;
-  margin-inline-end: 1vw;
-}
-
-.notif1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.text-notif-product {
-  margin-inline-end: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.small-notifdrop {
-  font-size: x-small;
-  padding-bottom: 5px;
-}
-
-.desc-notifdrop {
-  font-size: 14px;
-  padding-bottom: 3px;
-}
-
-.time-clock {
-  margin-inline-start: 3%;
-}
-
-.alerts-notifdrop {
-  background-color: #FA2C5A;
-  width: 8px;
-  height: 8px;
-  margin-inline-start: 3%;
-  margin-top: 2px;
-  margin-left: 10px;
-}
-
-

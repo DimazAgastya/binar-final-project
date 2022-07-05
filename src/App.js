@@ -7,6 +7,7 @@ import Diminati from "./Pages/Diminati/SellerDiminati";
 import Notif from "./Pages/Notif/Notif";
 import Profile from "./Pages/Profile/Profile";
 import NavbarLogin from "./Components/NavbarLogin/NavbarLogin";
+import Sidebar from "./Components/Sidebar/Sidebar";
 import Buyer from "./Pages/Buyer";
 import InfoPenawaran from "./Pages/InfoPenawaran";
 import Seller from "./Pages/Seller";
@@ -20,6 +21,7 @@ export default function App() {
 	return (
 		<>
 			<NavbarLogin />
+			<Sidebar />
 			<Routes>
 			
 				<Route path="/" element={<Home />} />
@@ -39,5 +41,3 @@ export default function App() {
 		</>
 	);
 }
-
-// 	<NavbarLogin/>
