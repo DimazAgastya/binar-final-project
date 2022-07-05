@@ -15,10 +15,6 @@ const Category = () => {
 				</button>
 				<button type="button" className="btn-cate m-2">
 					<FiSearch className="fi m-1" />
-					Jam
-				</button>
-				<button type="button" className="btn-cate m-2">
-					<FiSearch className="fi m-1" />
 					Hobi
 				</button>
 				<button type="button" className="btn-cate m-2">
@@ -27,7 +23,15 @@ const Category = () => {
 				</button>
 				<button type="button" className="btn-cate m-2">
 					<FiSearch className="fi m-1" />
+					Baju
+				</button>
+				<button type="button" className="btn-cate m-2">
+					<FiSearch className="fi m-1" />
 					Elektronik
+				</button>
+				<button type="button" className="btn-cate m-2">
+					<FiSearch className="fi m-1" />
+					Kesehatan
 				</button>
 			</div>
 

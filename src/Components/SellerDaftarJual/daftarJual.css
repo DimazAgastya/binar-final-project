@@ -101,6 +101,10 @@
 	margin-top: 3px;
 }
 
+.seller_menu {
+	margin: auto;
+}
+
 /*=========  profile seller end  ==========*/
 /*=========  category start  ==========*/
 
@@ -119,23 +123,31 @@
 }
 
 .category_text {
-	margin: 3px 0px 0px 15px;
-	/* color: var(--primary); */
+	margin: auto 0px auto 15px;
 }
 
 .icon_right {
-	margin-left: 70px;
+	margin: auto 0 auto 70px;
 }
 
 .icon_right_2 {
-	margin-left: 90px;
+	margin: auto 0 auto 113px;
 }
 
 .icon_right_3 {
-	margin-left: 100px;
+	margin: auto 0 auto 125px;
 }
 
-/*=========  caategory end  ==========*/
+.icon_right_4 {
+	margin: auto 0 auto 118px;
+}
+
+.icon_category_seller {
+	margin: 1px;
+	font-size: 1.5rem;
+}
+
+/*=========  category end  ==========*/
 /*=========  cardGroup start  ==========*/
 
 .card_container {
@@ -246,19 +258,53 @@
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
 	.icon_right {
-		margin-left: 50px;
+		margin-left: 5px;
 	}
 
 	.icon_right_2 {
-		margin-left: 45px;
+		margin-left: 48px;
 	}
 
 	.icon_right_3 {
-		margin-left: 58px;
+		margin-left: 59px;
+	}
+
+	.icon_right_4 {
+		margin-left: 52px;
+	}
+
+	.icon_category_seller {
+		font-size: 20px;
+		margin: auto 0px;
+	}
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+	.icon_right {
+		margin-left: 40px;
+	}
+
+	.icon_right_2 {
+		margin-left: 82px;
+	}
+
+	.icon_right_3 {
+		margin-left: 93px;
+	}
+
+	.icon_right_4 {
+		margin-left: 86px;
+	}
+
+	.icon_category_seller {
+		padding: 2px;
+		font-size: 1.5rem;
 	}
 }
 
-@media screen and (min-width: 1400px) {
+
+/* @media screen and (min-width: 1400px) {
 	.icon_right {
 		margin-left: 70px;
 	}
@@ -270,7 +316,11 @@
 	.icon_right_3 {
 		margin-left: 125px;
 	}
-}
+
+	.icon_right_4 {
+		margin-left: 10px;
+	}
+} */
 
 
 /*=========  interested product start  ==========*/

@@ -5,6 +5,7 @@ import ProfileSeller from "./ProfileSeller";
 import AllProduct from "./AllProduct";
 import SellerCategory from "./SellerCategory";
 import InterestedProduct from "./InterestedProduct";
+import { GiHamburgerMenu } from "react-icons/gi";
 // import EarlyNavbar from "../Navbar/EarlyNavbar";
 
 const daftarJual = () => {
@@ -16,7 +17,7 @@ const daftarJual = () => {
 			<div className="container mt-3">
 				<section className="d-flex seller_header">
 					<div className=" d-lg-none">
-						<img src="/SVG/menu.svg" alt="menu icon" className=" seller_menu" />
+						<GiHamburgerMenu alt="menu icon" className="seller_menu" />
 					</div>
 					<h2>Daftar Jual Saya</h2>
 				</section>
