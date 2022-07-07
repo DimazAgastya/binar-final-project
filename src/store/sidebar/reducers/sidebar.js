@@ -1,4 +1,4 @@
-export const sidebar = (state=false, action) => {
+const sidebar = (state=false, action) => {
     switch(action.type) {
         case "SHOW_SIDEBAR":
             return true;
@@ -8,3 +8,5 @@ export const sidebar = (state=false, action) => {
             return state;
     }
 }
+
+export default sidebar;

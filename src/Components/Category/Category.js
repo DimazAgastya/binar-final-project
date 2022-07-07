@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./category.css";
-import CardHome from "../CardHome/CardHome";
+import ProductHome from "../ProductHome/ProductHome";
 import { FiSearch } from "react-icons/fi";
 import FloatButton from "../FloatButton/FloatButton";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 
 const Category = () => {
+
+	// const getCategory = async () => {
+	// 	const category = await fetch("https://finalsecondhand-staging.herokuapp.com/categories")
+	// 	const value = await category.json()
+	// 	const result = value.categories.map(data => {
+	// 		return {
+	// 			label: data
+	// 		}
+	// 	})
+	// 	console.log(result)
+	// }
+
+	// const categories = useSelector(store => store.category)
+	// const dispatch = useDispatch()
+
+	// useEffect(() => {
+	// 	axios.get('https://finalsecondhand-staging.herokuapp.com/categories/')
+	// 	.then(response => {
+	// 		dispatch({
+	// 			type: 'populateCategories',
+	// 			payload: {
+	// 				categories: [...response.data]
+	// 			}
+	// 		})
+	// 	})
+	// }, [])
+
 	return (
 		<div className="container">
 			<h6 className="telusur-cate">Telusuri Kategori</h6>
@@ -36,18 +65,7 @@ const Category = () => {
 			</div>
 
 			{/* CARDS */}
-				<div className="card-home-wrapper">
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-					<div className="card-home-inner"><CardHome /></div>
-				</div>
+			<ProductHome />
 
 			{/* FLOATING ACTION BUTTON */}
 			<FloatButton />
@@ -56,24 +74,3 @@ const Category = () => {
 };
 
 export default Category;
-
-/*
-
-        <div className='row'>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-			<div className='col-lg-2 col-sm-6 p-1 mb-3'><Card /></div>
-        </div>
-
-
-*/

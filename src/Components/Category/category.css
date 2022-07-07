@@ -16,25 +16,10 @@
 	font-weight: 500;
 }
 
-.card-home-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card-home-inner {
-    margin: 1em;
-}
-
 /* --------------- MEDIA SCREEN --------------- */
 @media screen and (max-width: 770px) {
     .fi {
         display: none;
-    }
-}
-
-@media screen and (max-width: 1399px) {
-    .card-home-wrapper {
-        justify-content: center;
     }
 }
 

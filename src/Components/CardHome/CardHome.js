@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./cardHome.css";
 
-const Card = () => {
+const CardHome = (props) => {
+
 	return (
 		<>
-			<div className="card style-card">
-				<img className="card-img-top p-2 style-img" src="https://i.pinimg.com/564x/91/9d/ad/919dad52c0f041b6442c8b452bd6111a.jpg" alt="Card image" />
+			<div className="card style_card_home">
+				<img className="card-img-top p-2 style_img" src={props.product.image} alt="Card image" />
 				<div className="card-body">
-					<h5 className="card-title">I Might Regret This</h5>
-					<small className="card-text text-muted">Buku</small>
-					<p className="card-text mt-2">Rp50.000</p>
+					<h5 className="card-title">{props.product.title}</h5>
+					<small className="card-text text-muted">{props.product.description}</small>
+					<p className="card-text mt-2">Rp {props.product.price}</p>
 				</div>
 			</div>
 		</>
 	);
 };
 
-export default Card;
+export default CardHome;
