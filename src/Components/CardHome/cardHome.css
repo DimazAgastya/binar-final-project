@@ -1,0 +1,28 @@
+h5,
+p {
+	font-size: 14px;
+}
+
+.style_card_home {
+    margin: 10px;
+	transition: 0.3s;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+	border-style: none;
+	width: 180px;
+	height: 200px;
+	overflow-y: hidden;
+}
+
+.style_card_home:hover,
+.style_card_home:active {
+	transform: scale(1.05);
+}
+
+.style_img {
+	border-radius: 13px;
+	/* margin-top: 5px; */
+	/* border: 1px solid rgba(0, 0, 0, 0.15); */
+	width: auto;
+	height: 100px;
+	object-fit: contain;
+}
