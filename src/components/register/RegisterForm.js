@@ -38,12 +38,13 @@ const RegisterForm = () => {
 		};
 
 		axios
-			.post("https://finalsecondhand-staging.herokuapp.com/User/SignUp", postData) // kalau dah ready taruh link heroku disini
+			.post("https://finalsecondhand-staging.herokuapp.com/auth/sign-up", postData) // kalau dah ready taruh link heroku disini
 			.then((res) => {
-				// memastikan bahwa token nya ada
+				console.log(res);
+				/* memastikan bahwa token nya ada
 				if (typeof res.data.acessToken !== "undefined") {
 					localStorage.setItem("secondHandToken", res.data.acessToken);
-				}
+				} */
 
 				// menyimpan di redux store
 
@@ -82,7 +83,6 @@ const RegisterForm = () => {
 						<p>{formState.errors.user_name?.type === "required"}</p>
 					</div>
 				</div>
-
 				<div>
 					<label className="register_label email" htmlFor="email">
 						Email
@@ -92,7 +92,6 @@ const RegisterForm = () => {
 					</div>
 					<p>{formState.errors.user_email?.type === "required"}</p>
 				</div>
-
 				<div>
 					<label className="register_label" htmlFor="user_password">
 						Password

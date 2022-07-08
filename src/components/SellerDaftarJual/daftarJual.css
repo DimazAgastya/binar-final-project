@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
-
 :root {
 	--header: #000000;
 	--border: #d0d0d0;
@@ -125,6 +123,15 @@
 
 .category_text2 {
 	margin: 3px 0px 0px 15px;
+}
+
+.seller_link {
+	text-decoration: none;
+	color: var(--header);
+}
+
+.seller_link:hover {
+	color: var(--primary);
 }
 
 .icon_right {
