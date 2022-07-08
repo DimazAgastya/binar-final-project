@@ -41,7 +41,7 @@ const NavbarLogin = () => {
 				{/* MENU */}
 				<ul className="navbar_links">
 					<li className="navbar_link">
-						<Link to="/daftar-jual" className="icons-menu">
+						<Link to="/daftarjual" className="icons-menu">
 							<BiListUl />
 						</Link>
 					</li>
@@ -118,10 +118,7 @@ const NavbarLogin = () => {
 					</li>
 				</ul>
 
-				<GiHamburgerMenu
-					onClick={() => handleClick()}
-					className="navbar_burger"
-				/>
+				<GiHamburgerMenu onClick={() => handleClick()} className="navbar_burger" />
 			</div>
 		</div>
 	)

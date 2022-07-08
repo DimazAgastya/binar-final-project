@@ -25,18 +25,17 @@ export default function App() {
 			<Routes>
 			
 				<Route path="/" element={<Home />} />
-				<Route path="/daftar-jual" element={<DaftarJual />} />
 				<Route path="/notification" element={<Notif />} />
 				<Route path="/profile" element={<Profile />} />
-				<Route path="/buyer" element={<Buyer />} />
-				<Route path="/infopenawaran" element={<InfoPenawaran />} />
-				<Route path="/seller" element={<Seller />} />
+				<Route path="/buyer/:id" element={<Buyer />} />
+				<Route path="/infopenawaran/:id" element={<InfoPenawaran />} />
+				<Route path="/seller/:id" element={<Seller />} />
 				<Route path="/diminati" element={<Diminati />}></Route>
 				<Route path="/infoProduk" element={<InfoProduk />}></Route>
 				<Route path="/register" element={<Register />}></Route>
 				<Route path="/account" element={<Account />}></Route>
 				<Route path="/login" element={<Login />}></Route>
-				<Route path="/daftarJual" element={<DaftarJual />}></Route>
+				<Route path="/daftarjual" element={<DaftarJual />}></Route>
 			</Routes>
 		</>
 	);

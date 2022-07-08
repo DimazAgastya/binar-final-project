@@ -24,23 +24,33 @@ const SideBar = () => {
             <div className='sidebar_content'>
                 <ul className='sidebar_links'>
                     <li className='sidebar_link'>
-                        <Link to="/" className="sidebar_menu"><BiHomeHeart />Home</Link>
+                        <Link to="/" className="sidebar_menu">
+                            <BiHomeHeart className='icons_sidebar' />
+                            Home
+                        </Link>
                     </li>
                     <li className='sidebar_link'>
-                        <Link to="/daftar-jual" className="sidebar_menu"><BiListUl />Daftar Jual</Link>
+                        <Link to="/daftarjual" className="sidebar_menu">
+                            <BiListUl className='icons_sidebar' />
+                            Daftar Jual
+                        </Link>
                     </li>
                     <li className='sidebar_link'>
-                        <Link to="/notification" className="sidebar_menu"><IoIosNotificationsOutline />Notifikasi</Link>
+                        <Link to="/notification" className="sidebar_menu">
+                            <IoIosNotificationsOutline className='icons_sidebar' />
+                            Notifikasi
+                        </Link>
                     </li>
                     <li className='sidebar_link'>
-                        <Link to="/profile" className="sidebar_menu"><BsPerson />Profil</Link>
+                        <Link to="/profile" className="sidebar_menu">
+                            <BsPerson className='icons_sidebar' />
+                            Profil
+                        </Link>
                     </li>
                 </ul>
 
                 <div className='sidebar_close'>
-                    <ImCross
-                        onClick={() => handleClick()}
-                    />
+                    <ImCross onClick={() => handleClick()} />
                 </div>
             </div>
         </div>

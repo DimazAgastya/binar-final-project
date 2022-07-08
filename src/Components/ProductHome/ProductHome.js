@@ -10,14 +10,13 @@ const ProductHome = () => {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		// link masih contoh, belum ambil dari BE
-		axios.get('https://fakestoreapi.com/products')
+		axios.get('https://finalsecondhand-staging.herokuapp.com/product')
 		.then(response => {
 			// console.log(response)
 			dispatch({
 				type: 'populateProducts',
 				payload: {
-					products: [...response.data]
+					products: [...response.data.data.rows]
 				}
 			})
 		})

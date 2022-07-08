@@ -20,7 +20,7 @@
 } */
 
 .sidebar_content {
-    margin-top: 5vh;
+    margin-top: 4vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,8 +34,8 @@
     list-style: none;
     font-size: 20px;
     font-weight: 500;
-    font-family: san;
-    /* padding: 55px; */
+    /* font-family: san; */
+    padding: 20px 0;
     cursor: pointer;
     transition: 0.3s;
     color: white;
@@ -45,6 +45,11 @@
 .sidebar_link:hover {
     transform: scale(1.10);
     text-decoration: none;
+}
+
+.icons_sidebar {
+    margin-inline-end: 15px;
+    font-size: 30px;
 }
 
 .sidebar_menu {
@@ -57,8 +62,8 @@
 }
 
 .sidebar_close {
-    margin-inline-end: 7vw;
-    font-size: 30px;
+    margin-inline-end: 5vw;
+    font-size: 25px;
     cursor: pointer;
 }
 
