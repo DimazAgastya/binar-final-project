@@ -1,5 +1,5 @@
 import React from "react";
-import DiminatiPage from "../Components/Diminati/Diminati";
+import DiminatiPage from "../../Components/Diminati/Diminati";
 
 const Diminati = () => {
 	return (

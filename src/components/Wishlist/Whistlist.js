@@ -1,7 +1,7 @@
 import React from "react";
 import EarlyNavbar from "../Navbar/EarlyNavbar";
 import ProfileSeller from "../SellerDaftarJual/ProfileSeller";
-import Slider from "../SellerDaftarJual/slider";
+import Slider from "../SellerDaftarJual/Slider";
 import SellerCategory from "../SellerDaftarJual/SellerCategory";
 import "../SellerDaftarJual/daftarJual.css";
 import WishlistCard from "./WishlistCard";

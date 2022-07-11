@@ -1,5 +1,5 @@
 import React from "react";
-import TerjualPage from "../Components/Terjual/Terjual";
+import TerjualPage from "../../Components/Terjual/Terjual";
 const Terjual = () => {
 	return (
 		<div>

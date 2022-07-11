@@ -64,7 +64,7 @@ const LoginForm = () => {
 				//	console.log(err.response);
 				setLoginStatus({
 					success: false,
-					message: "Failed to make Account, please try again later",
+					message: "Failed to Login, make sure your Account has been register",
 				});
 			});
 	};
@@ -96,6 +96,8 @@ const LoginForm = () => {
 					Masuk
 				</button>
 			</form>
+			<div className="mx-2 my-4">{!loginStatus.sucess && loginStatus.message && <p className="text-danger">{loginStatus.message}</p>}</div>
+
 			<div className="footer">
 				<p>
 					belum punya akun?

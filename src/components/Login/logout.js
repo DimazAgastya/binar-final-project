@@ -15,7 +15,7 @@ const Logout = () => {
 	// user store = null
 	dispatch(userSlice.actions.removeUser());
 
-	return <Navigate to="/" />;
+	return <Navigate to="/register" />;
 };
 
 export default Logout;

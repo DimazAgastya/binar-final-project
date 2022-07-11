@@ -1,6 +1,6 @@
 import React from "react";
 import "./daftarJual.css";
-import Slider from "./slider";
+import Slider from "./Slider";
 import ProfileSeller from "./ProfileSeller";
 import CardGroup from "./CardGroup";
 import SellerCategory from "./SellerCategory";
