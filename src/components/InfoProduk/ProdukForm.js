@@ -1,6 +1,59 @@
-import React from "react";
-
+import React, { useState } from "react";
+import axios from "axios";
+import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import productSlice from "../../store/productSlice";
 const ProdukForm = () => {
+	const { register, handleSubmit, formState } = useForm();
+
+	// jika gagal login maka akan muncul pesan (pakai saat api nya udah kelar):
+	const [produkStatus, setProdukStatus] = useState({
+		success: false,
+		message: "",
+
+		/*
+
+	*/
+	});
+
+	// dispatch axios
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const [files, setFiles] = useState();
+
+	/*  const product = useSelector((state) => state.product.data);
+	console.log(product); */
+
+	//menampilkan data nama,email,password
+
+	const formSubmithandler = (data) => {
+		console.log(data);
+
+		const postData = {
+			name: data.produk_name,
+			price: data.produk_price,
+			description: data.produk_desc,
+			categories: data.produk_categories,
+		};
+
+		axios
+			.post("https://finalsecondhand-staging.herokuapp.com/auth/sign-up", postData) // kalau dah ready taruh link heroku disini
+			.then((res) => {
+				console.log(res);
+				navigate("/");
+			})
+
+			// failed  notification
+			.catch((err) => {
+				//	console.log(err.response);
+				setProdukStatus({
+					success: false,
+					message: "Failed to make Account, Please try again later",
+				});
+			});
+	};
+
 	return (
 		<div className="col-12 col-lg-4 produk_form_container">
 			<form className="infoProdukForm_container">

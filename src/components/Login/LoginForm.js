@@ -4,7 +4,7 @@ import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import userSlice from "../store/userSlice";
+import userSlice from "../../store/UserSlice";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
@@ -39,26 +39,25 @@ const LoginForm = () => {
 		axios
 			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData) // kalau dah ready taruh link heroku disini
 			.then((res) => {
-				console.log(res);
-				/* memastikan bahwa token nya ada
-		if (typeof res.data.acessToken !== "undefined") {
-					localStorage.setItem("secondHandToken", res.data.acessToken);
-				} */
+				// console.log(res);
+				localStorage.setItem("secondHandToken", res.data.token);
+				// memastikan token tersedia
+				if (typeof res.data.acessToken !== "undefined") {
+					localStorage.setItem("sessionId", res.data.data.user.user_id);
+					localStorage.setItem("sessionName", res.data.data.user.user_name);
+					localStorage.setItem("jwtToken", res.data.data.token);
+					localStorage.setItem("sessionCity", res.data.data.user.user_city);
+					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
+				}
+				navigate("/daftarJual");
+				// failed
 
-				// menyimpan di redux store
-
-				const user = jwtDecode(res.data.acessToken);
-				axios.get(`https://finalsecondhand-staging.herokuapp.com/User/DetailUser${user.sub}`).then((res) => {
-					dispatch(
-						userSlice.actions.addUser({
-							userData: res.data,
-						})
-					);
-					// jika sudah login maka diarahkan ke :
-					navigate("/daftarJual");
-				});
+				dispatch(
+					userSlice.actions.addUser({
+						userData: res.data.accessToken,
+					})
+				);
 			})
-
 			// failed register notification
 			.catch((err) => {
 				//	console.log(err.response);
@@ -111,9 +110,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-
-/*
-
-		<FiEye className="login_icon" />
-
-*/
