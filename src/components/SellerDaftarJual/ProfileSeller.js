@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./daftarJual.css";
 
 const ProfileSeller = () => {
@@ -15,7 +16,9 @@ const ProfileSeller = () => {
 					</div>
 				</div>
 				<div className="col-3 col-lg-1 btn_container">
-					<button className="btn_seller_bio text_small ">Edit</button>
+					<Link to="/profile">
+						<button className="btn_seller_bio text_small ">Edit</button>
+					</Link>
 				</div>
 			</div>
 		</div>

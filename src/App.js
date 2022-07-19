@@ -11,7 +11,7 @@ import Buyer from "./Pages/Buyer/Buyer";
 import InfoPenawaran from "./Pages/InfoPenawaran/InfoPenawaran";
 import Seller from "./Pages/Seller/Seller";
 import Register from "./Pages/Register/Register.js";
-import Login from "./Pages/Login/login";
+import Login from "./Pages/Login/Logins";
 import Account from "./Pages/Account/Account";
 import DaftarJual from "./Pages/DaftarJual/DaftarJual";
 import InfoProduk from "./Pages/InfoProduk/InfoProduk";
@@ -34,7 +34,17 @@ export default function App() {
 				<Route path="/account" element={<Account />}></Route>
 				<Route path="/login" element={<Login />}></Route>
 				<Route path="/daftarjual" element={<DaftarJual />}></Route>
+				<Route path="/" element={<Login />}></Route>
+				<Route path="/register" element={<Register />}></Route>
+				<Route path="/account" element={<Account />}></Route>
+				<Route path="/profile" element={<Profile />}></Route>
+				<Route path="/daftarJual" element={<DaftarJual />}></Route>
+				<Route path="/infoProduk" element={<InfoProduk />}></Route>
+				<Route path="/diminati" element={<Diminati />}></Route>
 			</Routes>
 		</>
 	);
 }
+
+// <Route path="/terjual" element={<Terjual />}></Route>
+//<Route path="/wishlist" element={<Wishlist />}></Route>

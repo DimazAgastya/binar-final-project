@@ -1,5 +1,6 @@
-to do sampe kamis : 
+Dimaz ngetes
+contoh123@gmail.com
+12345
 
-- login
-- register
-- react-dropzone
+
+https://finalsecondhand-staging.herokuapp.com/categories

@@ -1,7 +1,7 @@
 import React from "react";
 import "./account.css";
 
-const profile = () => {
+const settingAccount = () => {
 	// setting dropzone
 
 	return (
@@ -32,9 +32,8 @@ const profile = () => {
 				<hr></hr>
 				<footer className="text-center account_footer">Version 1.0.0</footer>
 			</div>
-			<div className="bottom_navbar text-center my-5 account_footer">here lies di bottom Navbar</div>
 		</>
 	);
 };
 
-export default profile;
+export default settingAccount;

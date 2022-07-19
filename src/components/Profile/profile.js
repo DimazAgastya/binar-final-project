@@ -10,12 +10,6 @@ const profile = () => {
 	return (
 		<div className="container-fluid profile_great_container">
 			<section>
-				<Header />
-			</section>
-			<section>
-				<SubHeader />
-			</section>
-			<section>
 				<Form />
 			</section>
 		</div>
@@ -23,3 +17,14 @@ const profile = () => {
 };
 
 export default profile;
+
+/*
+
+		<section>
+				<Header />
+			</section>
+			<section>
+				<SubHeader />
+			</section>
+
+*/
