@@ -42,7 +42,7 @@ const LoginForm = () => {
 				// console.log(res);
 				localStorage.setItem("secondHandToken", res.data.token);
 				// memastikan token tersedia
-				if (typeof res.data.acessToken !== "undefined") {
+				if (typeof res.data.accessToken !== "undefined") {
 					localStorage.setItem("sessionId", res.data.data.user.user_id);
 					localStorage.setItem("sessionName", res.data.data.user.user_name);
 					localStorage.setItem("jwtToken", res.data.data.token);
