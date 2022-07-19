@@ -122,37 +122,79 @@ export default RegisterForm;
 
 /*
 
+<div className="register_form_container register_right col-12 col-lg-4 m">
+			<h2 className="">Daftar</h2>
+			<form className="register_form" onSubmit={handleSubmit(formSubmitHandler)}>
+				<div>
+					<label className="register_label name" htmlFor="user_name">
+						Name
+					</label>
+					<div>
+						<input type="text" name="user_name" id="user_name" required placeholder="Nama Lengkap" className="input_box" {...register("user_name")}></input>
+						<p>{formState.errors.user_name?.type === "required"}</p>
+					</div>
+				</div>
+		
+				<div>
+					<label className="register_label email" htmlFor="email">
+						Email
+					</label>
+					<div>
+						<input type="email" name="user_email" id="user_email" required placeholder=" Contoh: johndee@gmail.com" className="input_box" {...register("user_email")}></input>
+					</div>
+					<p>{formState.errors.user_email?.type === "required"}</p>
+				</div>
+		
+				<div>
+					<label className="register_label" htmlFor="user_password">
+						Password
+					</label>
+					<div>
+						<input type="password" name="user_password" id="user_password" required="password" placeholder="Masukkan password" className="input_box" {...register("user_password")}></input>
+						<FiEye className="register_icon" />
+						<p>{formState.errors.user_password?.type === "required"}</p>
+					</div>
+				</div>
+				<Link to="#">
+					<button type="submit" className="btn_register mt-5">
+						Daftar
+					</button>
+				</Link>
+			</form>
 
-import axios from "axios";
-import { useDispatch } from "react-redux";
+			<div className="footer">
+				<p>
+					Sudah punya akun?
+					<Link to="/" className="daftar">
+						Masuk sini
+					</Link>
+				</p>
+			</div>
+		</div>
 
 
 
 
-	// jika gagal maka akan muncul :
+				<form onSubmit={handleSubmit(formSubmithandler)}>
+			<div>
+				<div className="email">
+					<label htmlFor="email">Email</label>
+				</div>
+				<input type="email" placeholder="Contoh: johndee@gmail.com" name="email" id="email" required {...register("user_email")} />
+				<p>{formState.errors.user_email?.type === "required"}</p>
+			</div>
+			<div>
+				<label htmlFor="user_password">Password</label>
+				<input type="password" placeholder="6+ karakter" name="user_password" id="user_password" required="password" {...register("user_password")} />
+				<p>{formState.errors.user_password?.type === "required"} </p>
+			</div>
 
-	const [regStatus, setRegStatus] = useState({
-		success: false,
-		message: "",
-	});
+			<div className="mb-4">
+				<button id="btn-save-modal" type="submit">
+					Register Account
+				</button>
+			</div>
+			<Link to="/login">already have an account</Link>
+		</form>
 
-	const dispatch = useDispatch();
-	const navigate = useNavigate();
-
-	// menampilkan isi data email serta Pass
-
-	const formSubmitHandler = (data) => {
-		console.log(data);
-
-		// setup pengiriman data via axios ( hasil akan berupa token)
-		const postData = {
-			name: data.user_name,
-			email: data.user_email,
-			password: data.user_password,
-		};
-
-		// halaman domain server taruh disini || axios.post("#", postData);
-	};
-
-	//  setup pengiriman data via axios ( hasilnya berupa ascess token)
 */
