@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./register.css";
+import "./Register.css";
 import { FiEye } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";

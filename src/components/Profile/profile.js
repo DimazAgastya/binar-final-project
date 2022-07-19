@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./ProfileHeader";
 // import SubHeader from "./ProfileSubHeader";
 import Form from "./ProfileForm";
-import "./profile.css";
+import "./Profile.css";
 
 const profile = () => {
 	// setting dropzone

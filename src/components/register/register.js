@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./RegisterHeader";
 import Image from "./RegisterImage";
 import Form from "./RegisterForm";
-import "./register.css";
+import "./Register.css";
 
 const register = () => {
 	return (

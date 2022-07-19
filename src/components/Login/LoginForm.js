@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiEye } from "react-icons/fi";
-import "./login.css";
+import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
