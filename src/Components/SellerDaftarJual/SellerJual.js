@@ -8,7 +8,7 @@ import EarlyNavbar from "../Navbar/EarlyNavbar";
 import InterestedProduct from "./InterestedProduct";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const daftarJual = () => {
+const sellerJual = () => {
 	return (
 		<div>
 			<section className="d-none d-lg-block">{/*	<EarlyNavbar /> */}</section>
@@ -38,7 +38,7 @@ const daftarJual = () => {
 	);
 };
 
-export default daftarJual;
+export default sellerJual;
 
 /*
 

@@ -7,14 +7,14 @@ import Notif from "./Pages/Notif/Notif";
 import Profile from "./Pages/Profile/Profile";
 import NavbarLogin from "./Components/NavbarLogin/NavbarLogin";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import Buyer from "./Pages/Buyer";
-import InfoPenawaran from "./Pages/InfoPenawaran";
-import Seller from "./Pages/Seller";
-import Register from "./Pages/Register";
-import Login from "./Pages/Login";
-import Account from "./Pages/Account";
-import DaftarJual from "./Pages/DaftarJual";
-import InfoProduk from "./Pages/InfoProduk";
+import Buyer from "./Pages/Buyer/Buyer";
+import InfoPenawaran from "./Pages/InfoPenawaran/InfoPenawaran";
+import Seller from "./Pages/Seller/Seller";
+import Register from "./Pages/Register/Register.js";
+import Login from "./Pages/Login/login";
+import Account from "./Pages/Account/Account";
+import DaftarJual from "./Pages/DaftarJual/DaftarJual";
+import InfoProduk from "./Pages/InfoProduk/InfoProduk";
 
 export default function App() {
 	return (

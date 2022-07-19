@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./buyer.css";
-import { Button, Carousel } from "react-bootstrap";
-import ModalBuyer from "../Components/Modal/ModalBuyer";
-import AlertBuyer from "../Components/Alert/AlertBuyer";
-// import Navbar from '../Components/Navbar/Navbar'
+import "./seller.css";
+import { Button, Alert, Carousel } from "react-bootstrap";
+import ModalBuyer from "../../Components/Modal/ModalBuyer";
+import AlertBuyer from "../../Components/Alert/AlertBuyer";
 import axios from "axios";
+// import Navbar from '../Components/Navbar/Navbar'
 
 const Buyer = () => {
 	const [show, setShow] = useState(false);
 	const [alertShow, setAlertShow] = useState(false);
 	const [disable, setDisable] = useState(false);
-
-	const buttonText = disable ? "Menunggu respon penjual" : "Saya Tertarik dan ingin Nego";
+	// const buttonText = disable ? "Menunggu respon penjual" : "Saya Tertarik dan ingin Nego";
 
 	const { id } = useParams();
 	const url = "https://finalsecondhand-staging.herokuapp.com/product/${id}";
@@ -74,8 +73,21 @@ const Buyer = () => {
 											Rp.
 											{product.data.price}
 										</h4>
-										<Button disabled={disable} className="button shadow-none button-disable" onClick={() => setShow(true)}>
-											<p className="btn-text">{buttonText}</p>
+										<Button
+											// href='/info'
+											disabled={disable}
+											className="button shadow-none button-terbitkan"
+											// onClick={() => setAlertShow(true)}
+										>
+											<p className="btn-text"> Terbitkan </p>
+										</Button>
+										<Button
+											//    href='/info'
+											disabled={disable}
+											className="button shadow-none button-edit"
+											// onClick={() => setAlertShow(true)}
+										>
+											<p className="btn-text"> Edit </p>
 										</Button>
 									</div>
 								</div>

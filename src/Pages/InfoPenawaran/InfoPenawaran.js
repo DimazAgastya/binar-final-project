@@ -1,9 +1,9 @@
 import React from "react";
-import CardProfile from "../Components/Cards/CardProfile";
+import CardPenawaran from "../../Components/Cards/CardPenawaran";
+import CardProfile from "../../Components/Cards/CardProfile";
 import "./InfoPenawaran.css";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { IoArrowBackOutline } from "react-icons/io5";
-import CardPenawaran from "../Components/Cards/CardPenawaran";
 
 const InfoPenawaran = () => {
 	return (
