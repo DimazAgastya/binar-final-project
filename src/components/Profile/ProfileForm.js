@@ -95,12 +95,12 @@ const ProfileForm = () => {
 
 	return (
 		<>
+			<div className="profile_header_lg d-none d-lg-block">
+				<h3 className="">Lengkapi info account</h3>
+			</div>
 			<div className="profile_form_container">
 				<form className="profile_register_form" onSubmit={handleSubmit(formSubmithandler)}>
 					<div className="profile_subHeader_container">
-						<div className="profile_header_lg d-none d-lg-block">
-							<h3 className="">Lengkapi info account</h3>
-						</div>
 						<div className="profile_photo_section">
 							<div {...getRootProps()} className="profile_dummy_dropzone" name="user_pict" id="user_pict">
 								<input {...getInputProps()} name="user_pict" id="user_pict" {...register("acceptedFiles")} />
@@ -148,18 +148,11 @@ const ProfileForm = () => {
 
 export default ProfileForm;
 
-// navigate("/daftarjual");
-
 /*
 
-		axios
-			.put("https://finalsecondhand-staging.herokuapp.com/User/UpdateUser", postData)
-			// perubahan data user
-
-			.then((res) => {
+	.then((res) => {
 				console.log(res);
-
-				const user = jwtDecode(res.data.acessToken);
+				const user = jwtDecode(res.data.token);
 				axios.get(`https://finalsecondhand-staging.herokuapp.com/User/DetailUser${user.sub}`).then((res) => {
 					dispatch(
 						userSlice.actions.addUser({
@@ -169,24 +162,5 @@ export default ProfileForm;
 					// jika sudah update maka diarahkan ke :
 					navigate("/daftarjual");
 				});
-			})
-
-			.catch((err) => {
-				setProfileStatus({
-					success: false,
-					message: "failed to update Profile,please check your Connection",
-				}
-
-
-
-						{products.map((product, index) => {
-						return (
-							<select id="user_city" className="select_border" {...register("user_city")} product={product} key={`	product-${index}`}>
-								<option disabled>Pilih Kota</option>
-								<option>Bali</option>
-								<option>Singkawang</option>
-							</select>
-						);
-					})}
 
 */

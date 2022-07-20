@@ -43,24 +43,15 @@ const LoginForm = () => {
 				localStorage.setItem("secondHandToken", res.data.token);
 				// memastikan token tersedia
 				if (typeof res.data.accessToken !== "undefined") {
-					localStorage.setItem("sessionId", res.data.data.user.user_id);
-					localStorage.setItem("sessionName", res.data.data.user.user_name);
-					localStorage.setItem("jwtToken", res.data.data.token);
-					localStorage.setItem("sessionCity", res.data.data.user.user_city);
-					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
+					dispatch(userSlice.actions.addUser(res.data.data));
+					navigate("/daftarJual");
 				}
-				navigate("/daftarJual");
 				// failed
-
-				dispatch(
-					userSlice.actions.addUser({
-						userData: res.data.accessToken,
-					})
-				);
 			})
 			// failed register notification
 			.catch((err) => {
-				//	console.log(err.response);
+				console.log(err.response);
+
 				setLoginStatus({
 					success: false,
 					message: "Failed to Login, make sure your Account has been register",

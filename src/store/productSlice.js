@@ -1,7 +1,18 @@
-import React from "react";
+import { createSlice } from "@reduxjs/toolkit";
 
-const product = () => {
-	return <div>product</div>;
-};
+let initialState = null;
 
-export default product;
+const productSlice = createSlice({
+	name: "product",
+	initialState: {
+		data: initialState,
+	},
+	reducers: {
+		addProduct: (state, action) => {
+			// action.payload: userData
+			state.data = { ...action.payload };
+		},
+	},
+});
+
+export default productSlice;
