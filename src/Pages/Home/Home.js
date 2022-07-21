@@ -1,14 +1,12 @@
 import React from "react";
 import Slider from "../../Components/Slider/Slider";
-import Category from "../../Components/Category/Category";
-import HomeNavbar from "../../Components/NavbarLogin/NavbarLogin";
+import ProductHome from "../../Components/ProductHome/ProductHome";
 
 const Home = () => {
 	return (
 		<>
-			{/* <HomeNavbar /> */}
 			<Slider />
-			<Category />
+			<ProductHome />
 		</>
 	);
 };

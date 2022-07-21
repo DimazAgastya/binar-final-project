@@ -1,19 +1,17 @@
 import React from "react";
 import "./daftarJual.css";
-import SliderSeller from "./SliderSeller";
+import Slider from "./slider";
 import ProfileSeller from "./ProfileSeller";
-import AllProduct from "./AllProduct";
+import CardGroup from "./CardGroup";
 import SellerCategory from "./SellerCategory";
+import EarlyNavbar from "../Navbar/EarlyNavbar";
 import InterestedProduct from "./InterestedProduct";
 import { GiHamburgerMenu } from "react-icons/gi";
-// import EarlyNavbar from "../Navbar/EarlyNavbar";
 
-const daftarJual = () => {
+const sellerJual = () => {
 	return (
 		<div>
-			{/* <section className="d-none d-lg-block">
-				<EarlyNavbar />
-			</section> */}
+			<section className="d-none d-lg-block">{/*	<EarlyNavbar /> */}</section>
 			<div className="container mt-3">
 				<section className="d-flex seller_header">
 					<div className=" d-lg-none">
@@ -25,17 +23,14 @@ const daftarJual = () => {
 					<ProfileSeller />
 				</section>
 				<section className="swiper_section container d-md-none">
-					<SliderSeller />
+					<Slider />
 				</section>
 				<section className=" main_container row">
 					<div className="d-none d-lg-block col-lg-3">
 						<SellerCategory />
 					</div>
-					{/* <div className="col-lg-9 card_group_container">
-						<AllProduct />
-					</div> */}
-					<div className="col-lg-9 py-4 text-center card_group_container">
-						<InterestedProduct />
+					<div className="col-lg-9 card_group_container">
+						<CardGroup />
 					</div>
 				</section>
 			</div>
@@ -43,7 +38,7 @@ const daftarJual = () => {
 	);
 };
 
-export default daftarJual;
+export default sellerJual;
 
 /*
 

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
-
 :root {
 	--header: #000000;
 	--border: #d0d0d0;
@@ -122,8 +120,25 @@
 	margin-bottom: 20px;
 }
 
+.category_text1 {
+	margin: 3px 0px 0px 15px;
+	color: var(--primary);
+}
+
+.category_text2 {
+	margin: 3px 0px 0px 15px;
+}
 .category_text {
 	margin: auto 0px auto 15px;
+}
+
+.seller_link {
+	text-decoration: none;
+	color: var(--header);
+}
+
+.seller_link:hover {
+	color: var(--primary);
 }
 
 .icon_right {
@@ -150,7 +165,7 @@
 /*=========  category end  ==========*/
 /*=========  cardGroup start  ==========*/
 
-.card_container {
+.seller_card_container {
 	border-radius: 4px;
 	width: 100%;
 	margin-top: 20px;
@@ -217,19 +232,17 @@
 	/*=========  bio seller end  ==========*/
 	/*=========  swiper start  ==========*/
 
+	.btn_swiperGroup {
+		margin-bottom: 20px;
+	}
 	.btn_swiper {
-		background-color: #E2D4F0;;
-		color: var(--header);
+		background-color: var(--primary);
+		color: var(--secondary);
 		border: none;
 		padding: 12px 38px;
 		border-radius: 16px;
 		font-size: 14px;
 		margin: 20px 15px 0px -10px;
-	}
-
-	.btn_swiper:hover, .btn_swiper:focus, .btn_swiper:active {
-		background-color: var(--primary);
-		color: var(--secondary);
 	}
 
 	/*=========  swiper end  ==========*/
@@ -239,12 +252,11 @@
 		margin-left: 10px;
 	}
 
-	.card_container {
+	.seller_card_container {
 		width: 100%;
-		margin: 50px 20px;
-		/* margin-top: 50px; */
+		margin-top: 50px;
 		border-radius: 16px;
-		/* margin-right: 20px; */
+		margin: 20px;
 		cursor: pointer;
 	}
 
@@ -277,7 +289,6 @@
 		font-size: 20px;
 		margin: auto 0px;
 	}
-
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -303,7 +314,6 @@
 	}
 }
 
-
 /* @media screen and (min-width: 1400px) {
 	.icon_right {
 		margin-left: 70px;
@@ -322,7 +332,6 @@
 	}
 } */
 
-
 /*=========  interested product start  ==========*/
 
 .box-interested {
@@ -330,6 +339,6 @@
 	width: 276px;
 	height: auto;
 	margin: auto;
-}	
+}
 
 /*=========  interested product end  ==========*/
