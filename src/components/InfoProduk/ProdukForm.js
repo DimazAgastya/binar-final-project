@@ -1,20 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-// import productSlice from "../../store/productSlice";
+import productSlice from "../../Store/productSlice";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { useDropzone } from "react-dropzone";
-import reactSelect from "react-select";
+import Select from "react-select";
 
 const ProdukForm = () => {
-	const dispatch = useDispatch();
 	const navigate = useNavigate();
-	const [files, setFiles] = useState();
-	const [categories, setCategories] = useState();
+	const [categories, setCategories] = useState([]);
+	const [files, setFiles] = useState([]);
+	const dispatch = useDispatch();
+	const product = useSelector((state) => state.product.data);
 
-	const { register, handleSubmit } = useForm();
+	const inputName = useRef();
+	const inputPrice = useRef();
+	const inputCategories = useRef();
+	const inputDescription = useRef();
+
+	console.log(product);
+
+	// possible err
+	// const product = useSelector((state) => state.product.data);
+
+	useEffect(() => {
+		if (product) {
+			inputName.current.value = product.name;
+			inputPrice.current.value = product.price;
+			inputDescription.current.value = product.description;
+			setCategories(product.categories);
+			setFiles(() =>
+				product.images.map((img) => {
+					return {
+						file: img,
+						url: window.URL.createObjectURL(img),
+					};
+				})
+			);
+		}
+	}, []);
+	console.log(categories);
+
+	const { handleSubmit } = useForm();
 
 	const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 	const InfoFiles = acceptedFiles.map((file) => (
@@ -22,11 +51,6 @@ const ProdukForm = () => {
 			{file.path} - {file.size} bytes
 		</li>
 	)); // dropzone setting
-
-	const [produkStatus, setProdukStatus] = useState({
-		success: false,
-		message: "",
-	});
 
 	const formSubmithandler = (data) => {
 		console.log(data);
@@ -40,19 +64,13 @@ const ProdukForm = () => {
 		};
 
 		axios
-			.put("https://finalsecondhand-staging.herokuapp.com/Product/UpdateProduct", postData) // kalau dah ready taruh link heroku disini
+			.post("https://finalsecondhand-staging.herokuapp.com/Product/CreateProduct", postData)
 			.then((res) => {
 				console.log(res);
-				navigate("/");
+				navigate("/daftarjual");
 			})
-
-			// failed  notification
 			.catch((err) => {
-				//	console.log(err.response);
-				setProdukStatus({
-					success: false,
-					message: "Failed to make Account, Please try again later",
-				});
+				console.log(err.response);
 			});
 	};
 
@@ -71,27 +89,27 @@ const ProdukForm = () => {
 					Nama Produk
 				</label>
 				<div>
-					<input type="text" name="produk_name" id="produk_name" required placeholder=" Nama Produk" className="infoProduk_box" {...register("produk_name")}></input>
+					<input type="text" name="produk_name" id="produk_name" required placeholder=" Nama Produk" className="infoProduk_box"></input>
 				</div>
 
 				<label className="infoProduk_label" htmlFor="nama">
 					Harga Produk
 				</label>
 				<div>
-					<input type="number" name="produk_price" id="produk_price" required placeholder="Harga Produk" className="infoProduk_box" {...register("produk_price")}></input>
+					<input type="number" name="produk_price" id="produk_price" required placeholder="Harga Produk" className="infoProduk_box"></input>
 				</div>
 
 				<label className="infoProduk_label" htmlFor="nama">
 					Kategori
 				</label>
 				<div>
-					<input type="text" name=" produk_desc" id="produk_desc" required placeholder="Pilihan Produk" className="infoProduk_box" {...register("produk_desc")}></input>
+					<Select options={options} className="infoProduk_box infoProduk_lastForm" />
 				</div>
 				<label className="infoProduk_label" htmlFor="nama">
 					Deskrpisi
 				</label>
 				<div>
-					<input type="text" name=" produk_categories" id="produk_categories" required placeholder="Contoh Jalan" className="infoProduk_box infoProduk_lastForm" {...register("produk_categories")}></input>
+					<input type="text" name=" produk_desc" id="produk_desc" required placeholder="Pilihan Produk" className="infoProduk_box"></input>
 				</div>
 				<div>
 					<div className="infoProduk_img" {...getRootProps()}>
@@ -118,3 +136,9 @@ const ProdukForm = () => {
 };
 
 export default ProdukForm;
+
+/*
+
+<input type="text" name=" produk_categories" id="produk_categories" required placeholder="Contoh Jalan" className="infoProduk_box infoProduk_lastForm" {...register("produk_categories")}></input>
+
+*/

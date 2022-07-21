@@ -4,7 +4,7 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import userSlice from "../../store/UserSlice";
+import userSlice from "../../Store/UserSlice";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
 
@@ -37,16 +37,20 @@ const LoginForm = () => {
 		};
 
 		axios
-			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData) // kalau dah ready taruh link heroku disini
+			.post("https://finalsecondhand-staging.herokuapp.com/auth/Login", postData)
 			.then((res) => {
 				// console.log(res);
 				localStorage.setItem("secondHandToken", res.data.token);
 				// memastikan token tersedia
 				if (typeof res.data.accessToken !== "undefined") {
+					localStorage.setItem("sessionId", res.data.data.user.user_id);
+					localStorage.setItem("sessionName", res.data.data.user.user_name);
+					localStorage.setItem("jwtToken", res.data.data.token);
+					localStorage.setItem("sessionCity", res.data.data.user.user_city);
+					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
 					dispatch(userSlice.actions.addUser(res.data.data));
-					navigate("/daftarJual");
 				}
-				// failed
+				navigate("/daftarJual");
 			})
 			// failed register notification
 			.catch((err) => {
@@ -58,6 +62,20 @@ const LoginForm = () => {
 				});
 			});
 	};
+
+	/*
+
+	localStorage.setItem("sessionId", res.data.data.user.user_id);
+					localStorage.setItem("sessionName", res.data.data.user.user_name);
+					localStorage.setItem("jwtToken", res.data.data.token);
+					localStorage.setItem("sessionCity", res.data.data.user.user_city);
+					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
+
+
+					dispatch(userSlice.actions.addUser(res.data.data));
+
+
+	*/
 
 	return (
 		<div className="login_right col-12 col-lg-4">

@@ -3,149 +3,168 @@ contoh123@gmail.com
 12345
 
 
-1. pindahkan button group info produk kedalam form
-2. lannjutkann fetching api didalam form 
-3. header form produk ditambahkan react dropzone kemudian ditambahan fetching api nya
-
-
-    TesingNavigate
-    contoh135@gmail.com
-  12345
-
-https://finalsecondhand-staging.herokuapp.com/categories
-
-
-
-axios({
-            method: 'put',
-            url:'https://secondhandapp.herokuapp.com/api/user/update/',
-            headers:header,
-            data:submittedData})
-
-
-            const header = {
-            'Content-Type': 'application/json',
-            'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZGVzdWdpYW50ckBnbWFpbC5jb20iLCJpYXQiOjE2NTUyMzAyNzl9.Ym2kWPQbT-ft-hWZQan8ncEEbXhoVtG4suiSGdN9wek'
-         }
-
-         'Authorization': `Bearer ${token}`
-
-
-
-         	.catch((err) => {
-				setProfileStatus({
-					success: false,
-					message: "failed to update Profile,please check your Connection",
-				}
+rizal@email.com
+1234567890
 
 
 
 
-        import React, { useState } from "react";
-import { FiEye } from "react-icons/fi";
-import "./login.css";
-import { Link, useNavigate } from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
-import userSlice from "../store/userSlice";
+import React, { useState } from "react";
+import "./Profile.css";
 import axios from "axios";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import userSlice from "../../store/UserSlice";
+import jwtDecode from "jwt-decode";
+import { useDropzone } from "react-dropzone";
 
-const LoginForm = () => {
-	const { register, handleSubmit, formState } = useForm();
+const ProfileForm = () => {
+	// dropzone
+	const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
-	// jika gagal login maka akan muncul pesan :
-	const [loginStatus, setLoginStatus] = useState({
+	const InfoFiles = acceptedFiles.map((file) => (
+		<li key={file.path}>
+			{file.path} - {file.size} bytes
+		</li>
+	));
+
+	const { register, handleSubmit } = useForm();
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+
+	const [profileStatus, setProfileStatus] = useState({
 		success: false,
 		message: "",
 
 		/*
-			{!loginStatus.sucess && loginStatus.message && <p className="text-danger  m-0 ">{loginStatus.message}</p>}
+			{!setProfileStatus.sucess && setProfileStatus.message && <p className="text-danger  m-0 ">{setProfileStatus.message}</p>}
 
 	*/
 	});
-
-	// dispatch axios
-	const dispatch = useDispatch();
-	const navigate = useNavigate();
-
-	//menampilkan data  email dan password
 
 	const formSubmithandler = (data) => {
 		console.log(data);
 
 		const postData = {
-			email: data.user_email,
-			password: data.user_password,
+			name: data.user_name,
+			city_id: data.user_city,
+			address: data.user_address,
+			no_hp: data.user_phone,
+			profile_pict: acceptedFiles[0],
+			// profile_pict: data.user_pict,
 		};
 
+		const ContentType = {
+			"Content-Type": "multipart/form-data'",
+			Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJjb250b2gxMjNAZ21haWwuY29tIiwiaWF0IjoxNjU4MzI2NDkwfQ._sNPmzqxwk-J8MO6i7VJo31vZyjcmhg_yW7M-Zjm8fw",
+		};
+
+		const tokens = localStorage.getItem("secondHandToken");
+
+		const headers = {
+			ContentType: "multipart/form-data",
+			Authorization: localStorage.getItem("secondHandToken"),
+		};
+
+		console.log(headers);
+		// Authorization: localStorage.getItem("secondHandToken"),
+		// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJjb250b2gxMjNAZ21haWwuY29tIiwiaWF0IjoxNjU4MzI2NDkwfQ._sNPmzqxwk-J8MO6i7VJo31vZyjcmhg_yW7M-Zjm8fw
+
 		axios
-			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData)
-			.then((res) => {
-				// console.log(res);
-				localStorage.setItem("secondHandToken", res.data.acessToken);
-				if (typeof res.data.acessToken !== "undefined") {
-					localStorage.setItem("sessionId", res.data.data.user.user_id);
-					localStorage.setItem("sessionName", res.data.data.user.user_name);
-					localStorage.setItem("jwtToken", res.data.data.token);
-					localStorage.setItem("sessionCity", res.data.data.user.user_city);
-					localStorage.setItem("sessionImage", res.data.data.user.user_imageUrl);
-				}
-				dispatch(
-					userSlice.actions.addUser({
-						userData: res.data,
-					})
-				);
-				navigate("/daftarJual");
+			.put("https://finalsecondhand-staging.herokuapp.com/user/update", postData, {
+				headers: headers,
 			})
-			// failed register notification
+
+			// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJjb250b2gxMjNAZ21haWwuY29tIiwiaWF0IjoxNjU4MzI4MDg5fQ._5GZJSfXH-A4yN7VrnPdYodoPNEpxKXDEYD4VcQO_JY
+
+			.then((res) => {
+				console.log(res);
+				const user = jwtDecode(res.data.token);
+				axios.get(`https://finalsecondhand-staging.herokuapp.com/User/DetailUser${user.sub}`).then((res) => {
+					dispatch(
+						userSlice.actions.addUser({
+							userData: res.data,
+						})
+					);
+					// jika sudah update maka diarahkan ke :
+					navigate("/daftarjual");
+				});
+			})
 			.catch((err) => {
-				//	console.log(err.response);
-				setLoginStatus({
+				setProfileStatus({
 					success: false,
-					message: "Failed to Login, make sure your Account has been register",
+					message: "failed to update Profile,please check your Connection",
 				});
 			});
 	};
 
-	return (
-		<div className="login_right col-12 col-lg-4">
-			<h2>Masuk</h2>
-			<form className="login_form" onSubmit={handleSubmit(formSubmithandler)}>
-				<div>
-					<label className="login_label" htmlFor="user_email">
-						Email
-					</label>
-					<div>
-						<input type="email" name="user_email" id="user_email" required placeholder=" Contoh: johndee@gmail.com" className="input_box" {...register("user_email")}></input>
-						<p>{formState.errors.user_email?.type === "required"}</p>
-					</div>
-				</div>
-				<div>
-					<label className="login_label" htmlFor="user_password">
-						Password
-					</label>
-					<div>
-						<input type="password" name="user_password" id="user_password" required="password" placeholder="Masukkan password" className="input_box" {...register("user_password")}></input>
-						<FiEye className="login_icon" />
-						<p>{formState.errors.user_name?.type === "required"}</p>
-					</div>
-				</div>
-				<button type="submit" className="login_submit mt-5">
-					Masuk
-				</button>
-			</form>
-			<div className="mx-2 my-4">{!loginStatus.sucess && loginStatus.message && <p className="text-danger">{loginStatus.message}</p>}</div>
+	/* useEffect(() => {
+		axios.get("https://finalsecondhand-staging.herokuapp.com/cities").then((Response) => {
+			dispatch({
+				type: "populateProducts",
+				payload: {
+					products: [...Response.data],
+				},
+			});
+		});
+	}, []);
+	
+	*/
 
-			<div className="footer">
-				<p>
-					belum punya akun?
-					<Link to="/register" className="daftar">
-						Daftar sini
-					</Link>
-				</p>
+	// drupzone
+
+	return (
+		<>
+			<div className="profile_header_lg d-none d-lg-block">
+				<h3 className="">Lengkapi info account</h3>
 			</div>
-		</div>
+			<div className="profile_form_container">
+				<form className="profile_register_form" onSubmit={handleSubmit(formSubmithandler)}>
+					<div className="profile_subHeader_container">
+						<div className="profile_photo_section">
+							<div {...getRootProps()} className="profile_dummy_dropzone" name="user_pict" id="user_pict">
+								<input {...getInputProps()} name="user_pict" id="user_pict" {...register("acceptedFiles")} />
+								{<p className="text_small text-center mt-5">Or simply drop here</p>}
+							</div>
+						</div>
+						<p className="dropzone_InfoFiles text-center">{InfoFiles}</p>
+					</div>
+					<label className="profile_label text_small" htmlFor="user_name">
+						Nama
+					</label>
+					<div>
+						<input type="text" name="user_name" id="user_name" required placeholder="Nama Lengkap" className="profile_input_box" {...register("user_name")}></input>
+					</div>
+					<label className="profile_label text_small" htmlFor="user_city">
+						Kota
+					</label>
+					<div className="select_container">
+						<select id="user_city" className="select_border" {...register("user_city")}>
+							<option disabled>Pilih Kota</option>
+							<option>1</option>
+							<option>2</option>
+						</select>
+					</div>
+					<label className="profile_label" htmlFor="user_address">
+						Alamat
+					</label>
+					<div>
+						<input type="text" name="user_address" id="user_address" required placeholder=" contoh alamat" className="profile_input_box" {...register("user_address")}></input>
+					</div>
+					<label className="profile_label text_small" htmlFor="user_phone">
+						No Handpone
+					</label>
+					<div>
+						<input type="number" name="user_phone" id="user_phone" required placeholder=" contoh: +628123456789" className="profile_input_box" {...register("user_phone")}></input>
+					</div>
+					<button type="submit" className="btn_profile_submit mt-5">
+						Simpan
+					</button>
+				</form>
+			</div>
+		</>
 	);
 };
 
-export default LoginForm;
+export default ProfileForm;

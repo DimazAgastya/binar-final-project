@@ -20,7 +20,6 @@ const RegisterForm = () => {
 	});
 
 	// dispatch axios
-	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 	//menampilkan data nama,email,password
@@ -35,15 +34,14 @@ const RegisterForm = () => {
 		};
 
 		axios
-			.post("https://finalsecondhand-staging.herokuapp.com/auth/sign-up", postData) // kalau dah ready taruh link heroku disini
+			.post("https://finalsecondhand-staging.herokuapp.com/auth/sign-up", postData)
 			.then((res) => {
 				console.log(res);
 				navigate("/");
 			})
 
-			// failed register notification
 			.catch((err) => {
-				//	console.log(err.response);
+				console.log(err.response);
 				setRegisStatus({
 					success: false,
 					message: "Failed to make Account, Please try again later",
