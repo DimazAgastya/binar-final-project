@@ -22,7 +22,7 @@ const Nav = () => {
 
     return (
         <div className='top-nav'>
-            <div className="wrap-nav container">
+            <div className="wrap-nav">
                 {/* LOGO */}
                 <div>
                     <Link to="/">

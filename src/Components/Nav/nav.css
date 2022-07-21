@@ -5,17 +5,26 @@
     height: 84px;
     color: white;
 
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .wrap-nav {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto; */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 15px 20px;
 }
 
 /* ---------------------- NAVBAR BASIC ---------------------- */
