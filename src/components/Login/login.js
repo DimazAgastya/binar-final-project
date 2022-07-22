@@ -1,6 +1,6 @@
 import React from "react";
 import LoginHeader from "./LoginHeader";
-import "./login.css";
+import "./Login.css";
 import LoginForm from "./LoginForm";
 import LoginImage from "./LoginImage";
 

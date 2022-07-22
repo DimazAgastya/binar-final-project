@@ -3,7 +3,7 @@ import "./navbarLogin.css";
 import { Link } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
-import { showSidebar } from "../../store/sidebar/actions/sidebar";
+// import { showSidebar } from "../../store/sidebar/actions/sidebar";
 // ICONS
 import { BiListUl } from "react-icons/bi";
 import { IoIosNotificationsOutline } from "react-icons/io";
@@ -14,9 +14,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const NavbarLogin = () => {
 	const dispatch = useDispatch();
 
-	const handleClick = () => {
+	/* const handleClick = () => {
 		dispatch(showSidebar());
 	};
+
+	*/
 
 	return (
 		<div className="navbar">
@@ -115,11 +117,11 @@ const NavbarLogin = () => {
 						</Link>
 					</li>
 				</ul>
-
-				<GiHamburgerMenu onClick={() => handleClick()} className="navbar_burger" />
 			</div>
 		</div>
 	);
 };
 
 export default NavbarLogin;
+
+// <GiHamburgerMenu onClick={() => handleClick()} className="navbar_burger" />

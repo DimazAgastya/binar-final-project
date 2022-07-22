@@ -4,15 +4,21 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Diminati from "./Pages/Diminati/SellerDiminati";
 import Notif from "./Pages/Notif/Notif";
+
+import Register from "./Pages/Register/Register";
+import Auth from "./Pages/Auth/auth";
+
+import Account from "./Pages/Account/Account";
+
 import Profile from "./Pages/Profile/Profile";
 import NavbarLogin from "./Components/NavbarLogin/NavbarLogin";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "./Components/Sidebar/sidebar";
 import Buyer from "./Pages/Buyer/Buyer";
 import InfoPenawaran from "./Pages/InfoPenawaran/InfoPenawaran";
 import Seller from "./Pages/Seller/Seller";
-import Register from "./Pages/Register/Register.js";
+
 import Login from "./Pages/Login/Logins";
-import Account from "./Pages/Account/Account";
+
 import DaftarJual from "./Pages/DaftarJual/DaftarJual";
 import InfoProduk from "./Pages/InfoProduk/InfoProduk";
 
@@ -41,10 +47,9 @@ export default function App() {
 				<Route path="/daftarJual" element={<DaftarJual />}></Route>
 				<Route path="/infoProduk" element={<InfoProduk />}></Route>
 				<Route path="/diminati" element={<Diminati />}></Route>
+
+				<Route element={<Auth />}></Route>
 			</Routes>
 		</>
 	);
 }
-
-// <Route path="/terjual" element={<Terjual />}></Route>
-//<Route path="/wishlist" element={<Wishlist />}></Route>

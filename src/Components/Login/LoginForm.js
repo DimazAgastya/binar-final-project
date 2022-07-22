@@ -1,32 +1,22 @@
 import React, { useState } from "react";
 import { FiEye } from "react-icons/fi";
-import "./login.css";
+import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import userSlice from "../../store/UserSlice";
+import userSlice from "../../Store/UserSlice";
 import axios from "axios";
-import jwtDecode from "jwt-decode";
 
 const LoginForm = () => {
 	const { register, handleSubmit, formState } = useForm();
 
-	// jika gagal login maka akan muncul pesan :
 	const [loginStatus, setLoginStatus] = useState({
 		success: false,
 		message: "",
-
-		/*
-			{!loginStatus.sucess && loginStatus.message && <p className="text-danger  m-0 ">{loginStatus.message}</p>}
-
-	*/
 	});
 
-	// dispatch axios
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-
-	//menampilkan data  email dan password
 
 	const formSubmithandler = (data) => {
 		console.log(data);

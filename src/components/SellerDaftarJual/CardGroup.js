@@ -3,10 +3,10 @@ import "./daftarJual.css";
 
 const CardGroup = () => {
 	return (
-		<div className="card_container">
-			<div class="row ">
-				<div class="col-5 col-lg-4 mb-3">
-					<div class="card rounded">
+		<div className="card_container my-3">
+			<div className="row ">
+				<div className="col-5 col-lg-4 mb-3">
+					<div className="card rounded">
 						<div className="text-center">
 							<img src="/images/jamCowo.png" className="image_card  rounded" alt="watch model" />
 						</div>
@@ -17,8 +17,8 @@ const CardGroup = () => {
 						</div>
 					</div>
 				</div>
-				<div class="col-5 col-lg-4 mb-3">
-					<div class="card rounded">
+				<div className="col-5 col-lg-4 mb-3">
+					<div className="card rounded">
 						<div className="text-center">
 							<img src="/images/jamCowo.png" className="image_card  rounded" alt="watch model" />
 						</div>
@@ -29,8 +29,8 @@ const CardGroup = () => {
 						</div>
 					</div>
 				</div>
-				<div class="col-5 col-lg-4 mb-3">
-					<div class="card rounded">
+				<div className="col-5 col-lg-4 mb-3">
+					<div className="card rounded">
 						<div className="text-center">
 							<img src="/images/jamCowo.png" className="image_card  rounded" alt="watch model" />
 						</div>
@@ -41,8 +41,8 @@ const CardGroup = () => {
 						</div>
 					</div>
 				</div>
-				<div class="col-5 col-lg-4 mb-3">
-					<div class="card rounded">
+				<div className="col-5 col-lg-4 mb-3">
+					<div className="card rounded">
 						<div className="text-center">
 							<img src="/images/jamCowo.png" className="image_card  rounded" alt="watch model" />
 						</div>
@@ -53,8 +53,8 @@ const CardGroup = () => {
 						</div>
 					</div>
 				</div>
-				<div class="col-5 col-lg-4 mb-3">
-					<div class="card rounded">
+				<div className="col-5 col-lg-4 mb-3">
+					<div className="card rounded">
 						<div className="text-center">
 							<img src="/images/jamCowo.png" className="image_card  rounded" alt="watch model" />
 						</div>
@@ -65,8 +65,8 @@ const CardGroup = () => {
 						</div>
 					</div>
 				</div>
-				<div class="col-5 col-lg-4 mb-3">
-					<div class="card rounded">
+				<div className="col-5 col-lg-4 mb-3">
+					<div className="card rounded">
 						<div className="text-center">
 							<img src="/images/jamCowo.png" className="image_card  rounded" alt="watch model" />
 						</div>
