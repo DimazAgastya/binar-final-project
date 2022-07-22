@@ -40,7 +40,7 @@ const LoginForm = () => {
 					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
 					dispatch(userSlice.actions.addUser(res.data.data));
 				}
-				navigate("/daftarJual");
+				navigate("/");
 			})
 			// failed register notification
 			.catch((err) => {
