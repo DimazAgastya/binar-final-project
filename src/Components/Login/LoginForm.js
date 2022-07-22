@@ -27,7 +27,7 @@ const LoginForm = () => {
 		};
 
 		axios
-			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData) // kalau dah ready taruh link heroku disini
+			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData)
 			.then((res) => {
 				// console.log(res);
 				localStorage.setItem("secondHandToken", res.data.token);
@@ -38,19 +38,14 @@ const LoginForm = () => {
 					localStorage.setItem("jwtToken", res.data.data.token);
 					localStorage.setItem("sessionCity", res.data.data.user.user_city);
 					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
+					dispatch(userSlice.actions.addUser(res.data.data));
 				}
 				navigate("/daftarJual");
-				// failed
-
-				dispatch(
-					userSlice.actions.addUser({
-						userData: res.data.accessToken,
-					})
-				);
 			})
 			// failed register notification
 			.catch((err) => {
-				//	console.log(err.response);
+				console.log(err.response);
+
 				setLoginStatus({
 					success: false,
 					message: "Failed to Login, make sure your Account has been register",
