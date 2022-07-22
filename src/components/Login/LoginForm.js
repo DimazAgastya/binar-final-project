@@ -6,27 +6,17 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import userSlice from "../../Store/UserSlice";
 import axios from "axios";
-import jwtDecode from "jwt-decode";
 
 const LoginForm = () => {
 	const { register, handleSubmit, formState } = useForm();
 
-	// jika gagal login maka akan muncul pesan :
 	const [loginStatus, setLoginStatus] = useState({
 		success: false,
 		message: "",
-
-		/*
-			{!loginStatus.sucess && loginStatus.message && <p className="text-danger  m-0 ">{loginStatus.message}</p>}
-
-	*/
 	});
 
-	// dispatch axios
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-
-	//menampilkan data  email dan password
 
 	const formSubmithandler = (data) => {
 		console.log(data);
@@ -37,7 +27,7 @@ const LoginForm = () => {
 		};
 
 		axios
-			.post("https://finalsecondhand-staging.herokuapp.com/auth/Login", postData)
+			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData)
 			.then((res) => {
 				// console.log(res);
 				localStorage.setItem("secondHandToken", res.data.token);
@@ -62,20 +52,6 @@ const LoginForm = () => {
 				});
 			});
 	};
-
-	/*
-
-	localStorage.setItem("sessionId", res.data.data.user.user_id);
-					localStorage.setItem("sessionName", res.data.data.user.user_name);
-					localStorage.setItem("jwtToken", res.data.data.token);
-					localStorage.setItem("sessionCity", res.data.data.user.user_city);
-					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
-
-
-					dispatch(userSlice.actions.addUser(res.data.data));
-
-
-	*/
 
 	return (
 		<div className="login_right col-12 col-lg-4">

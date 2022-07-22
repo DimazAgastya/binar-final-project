@@ -11,7 +11,7 @@ const initialState = {
 export const login = createAsyncThunk("auth/login", async (data, { rejectWithValue }) => {
 	const { email, password } = data;
 	try {
-		const response = await axios.post("https://finalsecondhand-staging.herokuapp.com/User/Login", { email, password });
+		const response = await axios.post("https://finalsecondhand-staging.herokuapp.com/auth/login", { email, password });
 
 		return response.data.token;
 	} catch (error) {
@@ -22,7 +22,7 @@ export const login = createAsyncThunk("auth/login", async (data, { rejectWithVal
 export const register = createAsyncThunk("auth/register", async (data, { rejectWithValue }) => {
 	const { email, password, nama } = data;
 	try {
-		const response = await axios.post("https://finalsecondhand-staging.herokuapp.com/User/SignUp", { email, password, nama });
+		const response = await axios.post("https://finalsecondhand-staging.herokuapp.com/auth/sign-up", { email, password, nama });
 
 		return response.data.token;
 	} catch (error) {

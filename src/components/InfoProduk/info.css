@@ -1,12 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
-:root {
-	--header: #000000;
-	--border: #d0d0d0;
-	--primary: #7126b5;
-	--secondary: #ffffff;
-}
-
 .produk_header_container {
 	border: 1px solid var(--veryLight);
 	padding: 12px 24px;

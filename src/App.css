@@ -1,38 +1,54 @@
-.App {
-	text-align: center;
+:root {
+	--header: #000000;
+	--border: #d0d0d0;
+	--primary: #7126b5;
+	--secondary: #ffffff;
+	--lighter: #bf83f8;
+	--veryLight: #f5f4f4;
+	--thin: rgb(228, 222, 222);
 }
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
+.header {
+	font-family: Poppins;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 30px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
+.text_reguler {
+	font-family: Poppins;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
+.text_reguler_2 {
+	font-family: Poppins;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
-.App-link {
-	color: #61dafb;
+.text_small {
+	font-family: Poppins;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.text_footer {
+	font-family: Poppins;
+	font-size: 10px;
+	font-weight: 400;
+	line-height: 14px;
+	letter-spacing: 0em;
+	text-align: left;
 }

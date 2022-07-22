@@ -59,6 +59,15 @@
 
 /*=========  default setting end  ==========*/
 /*=========  header start  ==========*/
+.link_profile {
+	text-decoration: none;
+	color: var(--header);
+}
+
+.link_profile:hover {
+	text-decoration: none;
+	color: var(--header);
+}
 
 .produk_header_container {
 	border-bottom: 1px solid var(--border);
@@ -66,7 +75,7 @@
 }
 
 .produk_header {
-	margin: 20px 0px 0px 40vh;
+	margin: 22px 0px 0px 50vh;
 }
 
 .infoProduk_arrow {
@@ -74,13 +83,18 @@
 }
 
 /*=========  header end  ==========*/
-/*=========   start  ==========*/
+/*=========  form  start  ==========*/
 
 .infoProduk_box {
 	border: 1px solid var(--border);
 	margin-left: 10px;
 	border-radius: 16px;
 	padding: 12px;
+	width: 150%;
+}
+
+.infoProduk_lastForm {
+	margin-left: 10px;
 	width: 150%;
 }
 
@@ -107,8 +121,8 @@
 	color: var(--header);
 }
 
-/*=========   end  ==========*/
-/*=========   start  ==========*/
+/*========= dropzone  end  ==========*/
+/*=========  buttons start  ==========*/
 
 .produk_btn1 {
 	margin-bottom: 50px;
@@ -174,11 +188,13 @@
 	}
 
 	.infoProduk_lastForm {
-		margin-bottom: 20px;
+		margin-left: 10px;
+		width: 85%;
+		border-radius: 16px;
 	}
 
 	.infoProduk_img {
-		margin: 0px 0px 50px 10px;
+		margin: 20px 0px 50px 10px;
 	}
 
 	.produk_btn1 {

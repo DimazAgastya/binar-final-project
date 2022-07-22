@@ -33,12 +33,13 @@ const ProfileForm = () => {
 	};
 
 	// error disini :
-	const profile_user = useSelector((state) => state.auth);
+	//const profile_user = {useSelector((state) => state.auth)};
+	//	const profile_user = {useSelector((state) => state.auth)};
 
-	const token_profile = localStorage.getItem("secondHandToken");
-	//console.log(profile_user);
+	const profile_user = localStorage.getItem("secondHandToken");
+	//console.log(token_profile);
 
-	var DecodingJWT = jwtDecode(profile_user, token_profile);
+	var DecodingJWT = jwtDecode(profile_user);
 
 	// 	var DecodingJWT = jwtDecode(profile_user, token_profile);
 	// 	var DecodingJWT = jwtDecode(token_profile);
