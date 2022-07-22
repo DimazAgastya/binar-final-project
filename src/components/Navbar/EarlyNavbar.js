@@ -15,7 +15,7 @@ const NavbarLogin = () => {
 						{/* LOGO */}
 						<div className="col-auto">
 							<Link to="/">
-								<img src="/SVG/logo_Final.svg" className="navbar_logo" />
+								<div className="navbar_logo">logo</div>
 							</Link>
 						</div>
 
@@ -48,9 +48,6 @@ const NavbarLogin = () => {
 									</Link>
 								</li>
 							</ul>
-						</div>
-						<div>
-							<button className="btn_logout">Logout</button>
 						</div>
 					</div>
 				</div>

@@ -1,10 +1,12 @@
 import React from "react";
-import ProfilePage from "../../Components/Profile/profile";
+import Profilepage from "../../Components/Profile/profile";
+import Nav from "../../Components/Nav/Nav";
 
 const Profile = () => {
 	return (
 		<div>
-			<ProfilePage />
+			<Nav />
+			<Profilepage />
 		</div>
 	);
 };

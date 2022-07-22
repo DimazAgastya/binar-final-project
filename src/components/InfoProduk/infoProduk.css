@@ -59,15 +59,6 @@
 
 /*=========  default setting end  ==========*/
 /*=========  header start  ==========*/
-.link_profile {
-	text-decoration: none;
-	color: var(--header);
-}
-
-.link_profile:hover {
-	text-decoration: none;
-	color: var(--header);
-}
 
 .produk_header_container {
 	border-bottom: 1px solid var(--border);
@@ -75,7 +66,7 @@
 }
 
 .produk_header {
-	margin: 22px 0px 0px 50vh;
+	margin: 20px 0px 0px 40vh;
 }
 
 .infoProduk_arrow {
@@ -83,18 +74,13 @@
 }
 
 /*=========  header end  ==========*/
-/*=========  form  start  ==========*/
+/*=========   start  ==========*/
 
 .infoProduk_box {
 	border: 1px solid var(--border);
 	margin-left: 10px;
 	border-radius: 16px;
 	padding: 12px;
-	width: 150%;
-}
-
-.infoProduk_lastForm {
-	margin-left: 10px;
 	width: 150%;
 }
 
@@ -110,7 +96,7 @@
 	border-style: dashed;
 	width: 150px;
 	height: 125px;
-	margin: 50px 0px 50px 4vh;
+	margin: 50px 0px 50px 41vh;
 	border-radius: 16px;
 }
 
@@ -121,8 +107,8 @@
 	color: var(--header);
 }
 
-/*========= dropzone  end  ==========*/
-/*=========  buttons start  ==========*/
+/*=========   end  ==========*/
+/*=========   start  ==========*/
 
 .produk_btn1 {
 	margin-bottom: 50px;
@@ -131,7 +117,7 @@
 	font-weight: 400;
 	padding: 12px 90px;
 	border-radius: 16px;
-	margin-left: 4vh;
+	margin-left: 40vh;
 	transition: 0.4s ease-in-out;
 }
 
@@ -188,13 +174,11 @@
 	}
 
 	.infoProduk_lastForm {
-		margin-left: 10px;
-		width: 85%;
-		border-radius: 16px;
+		margin-bottom: 20px;
 	}
 
 	.infoProduk_img {
-		margin: 20px 0px 50px 10px;
+		margin: 0px 0px 50px 10px;
 	}
 
 	.produk_btn1 {

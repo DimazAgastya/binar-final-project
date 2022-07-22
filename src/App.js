@@ -7,49 +7,81 @@ import Notif from "./Pages/Notif/Notif";
 
 import Register from "./Pages/Register/Register";
 import Auth from "./Pages/Auth/auth";
-
 import Account from "./Pages/Account/Account";
-
 import Profile from "./Pages/Profile/Profile";
-import NavbarLogin from "./Components/NavbarLogin/NavbarLogin";
-import Sidebar from "./Components/Sidebar/sidebar";
+
 import Buyer from "./Pages/Buyer/Buyer";
 import InfoPenawaran from "./Pages/InfoPenawaran/InfoPenawaran";
 import Seller from "./Pages/Seller/Seller";
-
 import Login from "./Pages/Login/Logins";
-
 import DaftarJual from "./Pages/DaftarJual/DaftarJual";
 import InfoProduk from "./Pages/InfoProduk/InfoProduk";
+import Logout from "./Components/Login/logout";
+import Protected from "./Components/HOC/Protected";
+import Unprotected from "./Components/HOC/Unprotected";
+
+// Unprotected = Error
 
 export default function App() {
 	return (
 		<>
-			<NavbarLogin />
-			<Sidebar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/notification" element={<Notif />} />
-				<Route path="/profile" element={<Profile />} />
-				<Route path="/buyer/:id" element={<Buyer />} />
-				<Route path="/infopenawaran/:id" element={<InfoPenawaran />} />
-				<Route path="/seller/:id" element={<Seller />} />
-				<Route path="/diminati" element={<Diminati />}></Route>
-				<Route path="/infoProduk" element={<InfoProduk />}></Route>
-				<Route path="/register" element={<Register />}></Route>
-				<Route path="/account" element={<Account />}></Route>
+				<Route path="/logout" element={<Logout />} />
 				<Route path="/login" element={<Login />}></Route>
-				<Route path="/daftarjual" element={<DaftarJual />}></Route>
-				<Route path="/" element={<Login />}></Route>
-				<Route path="/register" element={<Register />}></Route>
-				<Route path="/account" element={<Account />}></Route>
-				<Route path="/profile" element={<Profile />}></Route>
-				<Route path="/daftarJual" element={<DaftarJual />}></Route>
-				<Route path="/infoProduk" element={<InfoProduk />}></Route>
-				<Route path="/diminati" element={<Diminati />}></Route>
 
-				<Route element={<Auth />}></Route>
+				{/* UNPROTECTED */}
+				<Route path="/" element={<Unprotected />}></Route>
+				<Route path="/" element={<Unprotected />}>
+					<Route path="register" element={<Register />}></Route>
+				</Route>
+
+				{/* PROTECTED */}
+				<Route path="/" element={<Protected />}>
+					<Route path="profile" element={<Profile />} />
+				</Route>
+				<Route path="/" element={<Protected />}>
+					<Route path="notification" element={<Notif />} />
+				</Route>
+				<Route path="/" element={<Protected />}>
+					<Route path="infoProduk" element={<InfoProduk />} />
+				</Route>
+				<Route path="/" element={<Protected />}>
+					<Route path="/daftarjual" element={<DaftarJual />}>
+						<Route path="semua" />
+						<Route path="diminati" element={<Diminati />} />
+						<Route path="terjual" />
+						<Route path="wishlist" />
+					</Route>
+				</Route>
+				<Route path="/" element={<Protected />}>
+					<Route path="/buyer/:id" element={<Buyer />} />
+					<Route path="/infopenawaran/:id" element={<InfoPenawaran />} />
+					<Route path="/seller/:id" element={<Seller />} />
+				</Route>
+				<Route path="/" element={<Protected />}>
+					<Route path="/account" element={<Account />}></Route>
+				</Route>
 			</Routes>
 		</>
 	);
 }
+
+// <Route path="/terjual" element={<Terjual />}></Route>
+//<Route path="/wishlist" element={<Wishlist />}></Route>
+
+/*
+
+
+	
+			
+		
+		
+	
+		
+		
+			
+			
+		
+
+*/

@@ -9,7 +9,6 @@ let initialState = null;
 
 try {
 	// nama token
-
 	const token = localStorage.getItem("secondHandToken");
 	const userData = jwtDecode(token);
 	initialState = userData;
@@ -21,6 +20,8 @@ const userSlice = createSlice({
 		data: initialState,
 	},
 	reducers: {
+		// dipakai saat user login dan register
+
 		addUser: (state, action) => {
 			state.data = { ...action.payload.userData };
 		},
@@ -30,32 +31,11 @@ const userSlice = createSlice({
 		removeUser: (state) => {
 			state.data = null;
 		},
+
+		// getToken: (state) => {
+		// 	return state.token
+		// },
 	},
 });
 
 export default userSlice;
-
-/*
-
-import { createSlice } from "@reduxjs/toolkit";
-
-const userSlice = createSlice({
-  name: "user",
-  initialState: {
-    data: null,
-  },
-  reducers: {
-    addUser: (state, action) => {
-      // action.payload: userData
-      state.data = { ...action.payload };
-    },
-    removeUser: (state) => {
-      state.data = null;
-    },
-  },
-});
-
-export default userSlice;
-
-
-*/

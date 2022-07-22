@@ -2,9 +2,9 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
-.container-seller {
+/* .container-seller {
 	max-width: 968px;
-}
+} */
 
 .back-nav {
 	display: none;
@@ -267,7 +267,7 @@ body {
 	}
 
 	.back-nav {
-		display: block;
+		display: none;
 		top: 30px;
 		padding: 14px 16px;
 		position: absolute;

@@ -10,6 +10,8 @@ const LoginForm = () => {
 			<ProdukHeader />
 			<div className="container-lg">
 				<InfoProduk />
+				<ProdukImage />
+				<ProdukButtons />
 			</div>
 		</div>
 	);

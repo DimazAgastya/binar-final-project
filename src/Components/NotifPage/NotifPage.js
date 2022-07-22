@@ -14,7 +14,7 @@ const NotifPage = () => {
 					</a>
 			</Row>
       <div className='px-3 py-4 box-notifpage'>
-        <Link to='/infopenawaran'>
+        <Link to='/infopenawaran/:id'>
           <div className='notifpage py-1'>
             <div className='wrapper-img-notif'>
 							<img src="/images/jamCowo.png" alt="" className="img-notifpage" />
@@ -32,7 +32,7 @@ const NotifPage = () => {
 
         <hr className="m-0"/>
 
-        <Link to='/infopenawaran'>
+        {/* <Link to='/infopenawaran'>
           <div className='notifpage py-1'>
             <div className='wrapper-img-notif'>
 							<img src="/images/jamCowo.png" alt="" className="img-notifpage" />
@@ -46,7 +46,7 @@ const NotifPage = () => {
 						<p className="text-muted small-notifpage time-clock-notifpage">20 Apr, 14:04</p>
             <div className="alerts-notifpage rounded-circle"></div>
           </div>
-        </Link>
+        </Link> */}
       </div>
     </div>
     </>

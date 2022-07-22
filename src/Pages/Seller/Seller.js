@@ -1,63 +1,70 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "./seller.css";
 import { Button, Alert, Carousel } from "react-bootstrap";
 import ModalBuyer from "../../Components/Modal/ModalBuyer";
 import AlertBuyer from "../../Components/Alert/AlertBuyer";
 import axios from "axios";
-// import Navbar from '../Components/Navbar/Navbar'
+import jwtDecode from "jwt-decode";
+import userSlice from "../../Components/store/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
+import StoreCities from "../../Components/store/storeCities";
+import CarouselProduct from "../../Components/Carousel/CarouselProduct";
+import Nav from "../../Components/Nav/Nav";
 
 const Buyer = () => {
+	const { id } = useParams();
+
 	const [show, setShow] = useState(false);
 	const [alertShow, setAlertShow] = useState(false);
 	const [disable, setDisable] = useState(false);
-	// const buttonText = disable ? "Menunggu respon penjual" : "Saya Tertarik dan ingin Nego";
+	const [loginStatus, setLoginStatus] = useState({
+		success: false,
+		message: "",
+	});
+	const state = useSelector((state) => state.user);
 
-	const { id } = useParams();
-	const url = "https://finalsecondhand-staging.herokuapp.com/product/${id}";
+	// const url = `https://finalsecondhand-staging.herokuapp.com/product/${id}`
 	const [product, setProduct] = useState(null);
 
 	let content = null;
 
+	// useEffect(() => {
+	//     axios.get(url).then(response => { setProduct(response.data) })
+	// }, [url])
+
 	useEffect(() => {
-		axios.get(url).then((response) => {
+		axios.get(`https://finalsecondhand-staging.herokuapp.com/product/${id}`).then((response) => {
+			// console.log(response);
 			setProduct(response.data);
 		});
-	}, [url]);
+		// console.log(state.data.data.id);
+		// console.log(product.data.user.id);
+		// console.log(product);
+	}, [`https://finalsecondhand-staging.herokuapp.com/product/${id}`]);
 
 	if (product) {
+		// && state.data.data.id === product.data.user.id
 		content = (
 			<>
 				{/* <Navbar /> */}
 				<AlertBuyer show={alertShow} onClose={() => setAlertShow(false)} />
-				<div class="back-nav">
+				<div className="back-nav">
 					<Link to="/">
 						<img src="/img/fi_arrow-left.png" alt="" />
 					</Link>
 					{/* <a href=""><img src="img/fi_arrow-left.png" alt=""></a> */}
 				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 col-md-8 col-lg-8 g-4 carousel-mobile">
-							<Carousel>
-								<Carousel.Item>
-									<img className="d-block w-100" src="/img/product.png" alt="First slide" />
-								</Carousel.Item>
-								<Carousel.Item>
-									<img className="d-block w-100" src="/img/product.png" alt="Second slide" />
-								</Carousel.Item>
-								<Carousel.Item>
-									<img className="d-block w-100" src="/img/product.png" alt="Third slide" />
-								</Carousel.Item>
-								<Carousel.Item>
-									<img className="d-block w-100" src="/img/product.png" alt="Third slide" />
-								</Carousel.Item>
-							</Carousel>
+				<div className="container">
+					<div className="row">
+						<div className="col-sm-12 col-md-8 col-lg-8 g-4 carousel-mobile">
+							<CarouselProduct />
 						</div>
-						<div class="col-sm-12 col-md-4 col-lg-4 g-4 harga-mobile">
-							<div class="row gy-4 alignment-mobile">
-								<div class="col-12">
-									<div class="row harga">
+						<div className="col-sm-12 col-md-4 col-lg-4 g-4 harga-mobile">
+							<div className="row gy-4 alignment-mobile">
+								<div className="col-12">
+									<div className="row harga">
 										<h1>
 											{/* Jam Tangan Casio */}
 											{product.data.name}
@@ -68,7 +75,7 @@ const Buyer = () => {
 												return tag.category.name + ", ";
 											})}
 										</h3>
-										<h4 class="price">
+										<h4 className="price">
 											{/* Rp 250.000 */}
 											Rp.
 											{product.data.price}
@@ -91,27 +98,30 @@ const Buyer = () => {
 										</Button>
 									</div>
 								</div>
-								<div class="col-12">
-									<div class="row seller">
-										<div class="col-4 profile">
+								<div className="col-12">
+									<div className="row seller">
+										<div className="col-4 profile">
 											<Link to="/">
-												<img class="" src="/img/profile.png" alt="" />
+												<img className="" src="/img/profile.png" alt="" />
 											</Link>
 											{/* <img src="/img/profile.png" alt=""> */}
 										</div>
-										<div class="col-8 seller-name">
+										<div className="col-8 seller-name">
 											<h1>
 												{/* Nama Penjual */}
 												{product.data.user.name}
 											</h1>
-											<h3>Kota</h3>
+											<h3>
+												<StoreCities cityID={product.data.user.city_id} />
+												{/* Kota */}
+											</h3>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-12 col-md-8 col-lg-8 g-4 desc-mobile">
-							<div class="row desc">
+						<div className="col-sm-12 col-md-8 col-lg-8 g-4 desc-mobile">
+							<div className="row desc">
 								<h1>Deskripsi</h1>
 								<p>
 									{/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -134,9 +144,16 @@ const Buyer = () => {
 				</div>
 			</>
 		);
+	} else {
+		content = <>Silahkan Login</>;
 	}
 
-	return <>{content}</>;
+	return (
+		<>
+			<Nav />
+			{content}
+		</>
+	);
 };
 
 export default Buyer;

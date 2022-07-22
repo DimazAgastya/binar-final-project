@@ -13,7 +13,7 @@ const AlertPenawaran = (props) => {
                 onClose={props.onClose}
                 dismissible>
                 <p>
-                    Harga tawarmu berhasil dikirim ke penjual
+                Status produkmu telah diperbaharui ke pembeli
                 </p>
             </Alert>
         </>

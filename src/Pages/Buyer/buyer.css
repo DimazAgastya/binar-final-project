@@ -2,12 +2,17 @@ body {
 	font-family: "Poppins", sans-serif;
 }
 
-.container-buyer {
-	max-width: 980px;
-}
+/* .container-buyer {
+  max-width: 968px;
+} */
 
 .back-nav {
 	display: none;
+}
+
+.top-row-wishlist {
+	display: flex;
+	justify-content: space-between;
 }
 
 .harga {
@@ -249,7 +254,7 @@ body {
 	}
 
 	.back-nav {
-		display: block;
+		display: none;
 		top: 30px;
 		padding: 14px 16px;
 		position: absolute;
@@ -318,6 +323,109 @@ body {
 		margin: auto;
 	}
 }
+
+/*
+
+.carousel-mobile {
+		padding: 0;
+		margin: 0;
+	}
+
+	.carousel-inner {
+		border-radius: 0;
+	}
+
+	.carousel-control-next-icon {
+		display: none;
+	}
+
+	.carousel-control-prev-icon {
+		display: none;
+	}
+
+	.carousel-indicators [data-bs-target] {
+		background: transparent;
+
+		border: 1px solid #fff;
+	}
+
+	.carousel-indicators .active {
+		opacity: 1;
+		background: #fff;
+	}
+
+	.back-nav {
+		display: block;
+		top: 30px;
+		padding: 14px 16px;
+		position: absolute;
+		z-index: 12;
+	}
+	
+	.harga-mobile {
+		padding: 0;
+	}
+
+	.alignment-mobile {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.harga {
+		margin-top: -32px;
+		position: relative;
+	}
+	.harga .button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 12px 24px;
+
+		position: fixed;
+		max-width: 95%;
+		height: 48px;
+		bottom: 24px;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		background: #7126b5;
+		border: none;
+		border-radius: 16px;
+		color: #ffffff;
+		transition: none;
+	}
+
+	.harga .button:hover {
+		color: #fff;
+		background-color: #7f3bbf;
+		border: none;
+	}
+
+	.harga .button:focus {
+		color: #fff;
+		background-color: #7f3bbf;
+		border: none;
+	}
+
+	.harga .button:disabled {
+		color: #fff;
+		background-color: #d0d0d0;
+		border-color: #d0d0d0;
+		opacity: 1;
+	}
+
+	
+	.desc-mobile {
+		padding: 0 1rem;
+	}
+
+	.desc {
+		margin: auto;
+	}
+
+*/
+
 @media (max-width: 400px) {
 	/* .hero {
     background-repeat: no-repeat;

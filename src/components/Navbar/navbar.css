@@ -1,7 +1,7 @@
-.logo {
+/* .logo {
 	width: 100px;
 	height: auto;
-}
+} */
 
 #navlogin {
 	background: #ffffff;
@@ -21,15 +21,12 @@
 	font-size: larger;
 }
 
-.navbar_logo {
-	width: 30px;
-	margin-top: 5px;
-}
-
-.btn_logout {
+/* .navbar_logo {
+	width: 58px;
 	background-color: #7126b5;
-	border: none;
-	padding: 6px 12px;
-	color: #ffffff;
+	height: 38px;
 	border-radius: 4px;
-}
+	color: #ffffff;
+	text-decoration: none;
+	padding: 6px;
+} */
