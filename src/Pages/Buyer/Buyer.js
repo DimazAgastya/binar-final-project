@@ -5,6 +5,7 @@ import { Button, Carousel } from 'react-bootstrap'
 import ModalBuyer from '../../Components/Modal/ModalBuyer'
 import AlertBuyer from '../../Components/Alert/AlertBuyer'
 import StoreCities from '../../Components/store/storeCities'
+import Nav from '../../Components/Nav/Nav';
 // import Navbar from '../Components/Navbar/Navbar'
 import axios from 'axios'
 import { IoHeart } from 'react-icons/io5'
@@ -82,7 +83,7 @@ const Buyer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-8 col-lg-8 g-4 carousel-mobile">
-                            <CarouselProduct/>
+                            <CarouselProduct />
                         </div>
                         <div className="col-sm-12 col-md-4 col-lg-4 g-4 harga-mobile">
                             <div className="row gy-4 alignment-mobile">
@@ -180,6 +181,7 @@ const Buyer = () => {
 
     return (
         <>
+            <Nav />
             {content}
         </>
 

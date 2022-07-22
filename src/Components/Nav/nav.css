@@ -233,6 +233,24 @@ input.search-navbar {
 /* ---------------------- DROPDOWN NOTIF ---------------------- */
 
 
+/* ---------------------- LOGIN ---------------------- */
+.login {
+	background: #7126b5;
+    color: white;
+	border-radius: 12px;
+	font-size: 13px;
+	padding: 10px 15px;
+	border-style: none;
+}
+
+.login:hover,
+.login:focus {
+	background: #e2d4f0;
+	color: black;
+}
+/* ---------------------- LOGIN ---------------------- */
+
+
 /* ---------------------- LOGOUT ---------------------- */
 .logout {
 	background: #7126b5;

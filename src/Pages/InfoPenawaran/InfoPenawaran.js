@@ -8,6 +8,7 @@ import CardPenawaran from "../../Components/Cards/CardPenawaran";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import Nav from "../../Components/Nav/Nav";
 
 const InfoPenawaran = () => {
   const { id } = useParams()
@@ -63,6 +64,7 @@ const InfoPenawaran = () => {
 
   return (
     <>
+      <Nav />
       {content}
     </>
   );

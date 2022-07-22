@@ -65,81 +65,118 @@ const Nav = () => {
                 </label>
 
                 <ul className="menu">
+
+                    {user === null &&
+                        <Link to='/login'>
+                            <button className='login'>Login</button>
+                        </Link>
+                    }
+
+                    {/* PROTECTED */}
                     {/* DAFTAR JUAL */}
                     <li>
-                        <Link to="/daftarjual" className="icons-menu">
-                            <BiListUl />
-                            <p className='menu-word'>Daftar Jual</p>
-                        </Link>
+                        {user !== null &&
+                            <Link to="/daftarjual" className="icons-menu">
+                                <BiListUl />
+                                <p className='menu-word'>Daftar Jual</p>
+                            </Link>
+                        }
                     </li>
 
+                    {/* PROTECTED */}
                     {/* NOTIFICATION */}
                     <li>
-                        <div className="dropdown-notif">
-                            <Link to='/notification' className="icons-menu">
-                                <IoIosNotificationsOutline />
-                                <p className='menu-word'>Notifikasi</p>
-                            </Link>
-                            {/* <div className="icons-menu-mobile">
+                        {user !== null &&
+                            <div className="dropdown-notif">
+                                <Link to='/notification' className="icons-menu">
+                                    <IoIosNotificationsOutline />
+                                    <p className='menu-word'>Notifikasi</p>
+                                </Link>
+                                {/* <div className="icons-menu-mobile">
                                 <IoIosNotificationsOutline />
                                 <p className='menu-word'>Notifikasi</p>
                             </div> */}
-                            <div className="dropdown-content-notif">
-                                <div className="align-items-center">
-                                    <div className="px-3 py-2 box-notif">
-                                        {notifdrop.map((ndrop, id) => {
-                                            return (
-                                                <Link to="/notification">
-                                                    <div className="notif1 py-1" key={id}>
-                                                        <div>
-                                                            <img src="/images/jamCowo.png" alt="" className="img-notif-dropdown" />
+                                <div className="dropdown-content-notif">
+                                    <div className="align-items-center">
+                                        <div className="px-3 py-2 box-notif">
+                                            {notifdrop.map((ndrop, id) => {
+                                                return (
+                                                    <Link to="/notification">
+                                                        <div className="notif1 py-1" key={id}>
+                                                            <div>
+                                                                <img src="/images/jamCowo.png" alt="" className="img-notif-dropdown" />
+                                                            </div>
+                                                            <div className="text-notif-product">
+                                                                <div className="text-muted small-notifdrop">{ndrop.title}</div>
+                                                                <div className="desc-notifdrop">Jam Tangan Casio</div>
+                                                                <div className="desc-notifdrop">Rp 250.000</div>
+                                                                <div className="desc-notifdrop">Ditawar Rp 200.000</div>
+                                                            </div>
+                                                            <p className="text-muted small-notifdrop time-clock">20 Apr, 14:04</p>
+                                                            <div className="alerts-notifdrop rounded-circle"></div>
                                                         </div>
-                                                        <div className="text-notif-product">
-                                                            <div className="text-muted small-notifdrop">{ndrop.title}</div>
-                                                            <div className="desc-notifdrop">Jam Tangan Casio</div>
-                                                            <div className="desc-notifdrop">Rp 250.000</div>
-                                                            <div className="desc-notifdrop">Ditawar Rp 200.000</div>
-                                                        </div>
-                                                        <p className="text-muted small-notifdrop time-clock">20 Apr, 14:04</p>
-                                                        <div className="alerts-notifdrop rounded-circle"></div>
+                                                    </Link>
+                                                )
+                                            })}
+
+                                            <Link to="/notification">
+                                                <div className="notif1 py-1">
+                                                    <div>
+                                                        <img src="/images/jamCowo.png" alt="" className="img-notif-dropdown" />
                                                     </div>
-                                                </Link>
-                                            )
-                                        })}
-
-                                        <hr className="m-0 text-muted" />
-
-                                        <Link to="/notification">
-                                            <div className="notif1 py-1">
-                                                <div>
-                                                    <img src="/images/jamCowo.png" alt="" className="img-notif-dropdown" />
+                                                    <div className="text-notif-product">
+                                                        <div className="text-muted small-notifdrop">Penawaran produk</div>
+                                                        <div className="desc-notifdrop">Jam Tangan Casio</div>
+                                                        <div className="desc-notifdrop">Rp 250.000</div>
+                                                        <div className="desc-notifdrop">Ditawar Rp 200.000</div>
+                                                    </div>
+                                                    <p className="text-muted small-notifdrop time-clock">20 Apr, 14:04</p>
+                                                    <div className="alerts-notifdrop rounded-circle"></div>
                                                 </div>
-                                                <div className="text-notif-product">
-                                                    <div className="text-muted small-notifdrop">Penawaran produk</div>
-                                                    <div className="desc-notifdrop">Jam Tangan Casio</div>
-                                                    <div className="desc-notifdrop">Rp 250.000</div>
-                                                    <div className="desc-notifdrop">Ditawar Rp 200.000</div>
+                                            </Link>
+                                            <hr className="m-0 text-muted" />
+
+                                            <Link to="/notification">
+                                                <div className="notif1 py-1">
+                                                    <div>
+                                                        <img src="/images/jamCowo.png" alt="" className="img-notif-dropdown" />
+                                                    </div>
+                                                    <div className="text-notif-product">
+                                                        <div className="text-muted small-notifdrop">Penawaran produk</div>
+                                                        <div className="desc-notifdrop">Jam Tangan Casio</div>
+                                                        <div className="desc-notifdrop">Rp 250.000</div>
+                                                        <div className="desc-notifdrop">Ditawar Rp 200.000</div>
+                                                    </div>
+                                                    <p className="text-muted small-notifdrop time-clock">20 Apr, 14:04</p>
+                                                    <div className="alerts-notifdrop rounded-circle"></div>
                                                 </div>
-                                                <p className="text-muted small-notifdrop time-clock">20 Apr, 14:04</p>
-                                                <div className="alerts-notifdrop rounded-circle"></div>
-                                            </div>
-                                        </Link>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        }
                     </li>
 
+                    {/* PROTECTED */}
                     {/* PROFIL */}
                     <li>
-                        <Link to="/profile" className="icons-menu">
-                            <BsPerson />
-                            <p className='menu-word'>Profil</p>
-                        </Link>
+                        {user !== null &&
+                            <Link to="/profile" className="icons-menu">
+                                <BsPerson />
+                                <p className='menu-word'>Profil</p>
+                            </Link>
+                        }
                     </li>
 
+                    {/* PROTECTED */}
+                    {/* LOGOUT */}
                     <li>
-                        {user !== null && <Link to='/logout'><button className='logout'>Logout</button></Link>}
+                        {user !== null &&
+                            <Link to='/logout'>
+                                <button className='logout'>Logout</button>
+                            </Link>
+                        }
                     </li>
                 </ul>
             </div>

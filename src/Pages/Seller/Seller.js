@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useForm } from "react-hook-form";
 import StoreCities from '../../Components/store/storeCities'
 import CarouselProduct from '../../Components/Carousel/CarouselProduct'
-// import Navbar from '../Components/Navbar/Navbar'
+import Nav from '../../Components/Nav/Nav';
 
 const Buyer = () => {
     const { id } = useParams()
@@ -168,7 +168,7 @@ const Buyer = () => {
     return (
 
         <>
-
+            <Nav />
             {content}
         </>
 
