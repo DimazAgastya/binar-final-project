@@ -53,6 +53,7 @@ p {
 .style_card_home:hover,
 .style_card_home:active {
 	transform: scale(1.05);
+	cursor: pointer;
 }
 
 .style_img {

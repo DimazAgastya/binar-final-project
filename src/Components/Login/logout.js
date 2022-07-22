@@ -1,5 +1,5 @@
 import React from "react";
-import userSlice from "../../store/user";
+import userSlice from "../../store/UserSlice";
 import { useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
 

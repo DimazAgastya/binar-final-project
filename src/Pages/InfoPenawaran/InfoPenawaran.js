@@ -27,7 +27,7 @@ const InfoPenawaran = () => {
     axios.get(url, config).then(response => { setOffer(response.data) })
   }, [url])
 
-  if (offer ) 
+  if (offer)
   // && state.data.data.id === offer.data.user.id
   {
     content =

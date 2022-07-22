@@ -254,7 +254,7 @@ body {
   }
 
   .back-nav {
-    display: block;
+    display: none;
     top: 30px;
     padding: 14px 16px;
     position: absolute;

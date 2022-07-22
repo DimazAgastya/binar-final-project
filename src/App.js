@@ -14,6 +14,7 @@ import Login from "./Pages/Login/Logins";
 import Account from "./Pages/Account/Account";
 import DaftarJual from "./Pages/DaftarJual/DaftarJual";
 import InfoProduk from "./Pages/InfoProduk/InfoProduk";
+import Logout from "./Components/Login/logout";
 
 export default function App() {
 	return (
@@ -39,6 +40,7 @@ export default function App() {
 				<Route path="/profile" element={<Profile />}></Route>
 				<Route path="/daftarJual" element={<DaftarJual />}></Route>
 				<Route path="/diminati" element={<Diminati />}></Route>
+				<Route path="/logout" element={<Logout />}></Route>
 			</Routes>
 		</>
 	);
