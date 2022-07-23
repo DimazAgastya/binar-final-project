@@ -4,18 +4,23 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Diminati from "./Pages/Diminati/SellerDiminati";
 import Notif from "./Pages/Notif/Notif";
+
+import Register from "./Pages/Register/Register";
+import Auth from "./Pages/Auth/auth";
+import Account from "./Pages/Account/Account";
 import Profile from "./Pages/Profile/Profile";
+
 import Buyer from "./Pages/Buyer/Buyer";
 import InfoPenawaran from "./Pages/InfoPenawaran/InfoPenawaran";
 import Seller from "./Pages/Seller/Seller";
-import Register from "./Pages/Register/Register.js";
 import Login from "./Pages/Login/Logins";
-import Account from "./Pages/Account/Account";
 import DaftarJual from "./Pages/DaftarJual/DaftarJual";
 import InfoProduk from "./Pages/InfoProduk/InfoProduk";
 import Logout from "./Components/Login/logout";
 import Protected from "./Components/HOC/Protected";
 import Unprotected from "./Components/HOC/Unprotected";
+
+// Unprotected = Error
 
 export default function App() {
 	return (
@@ -23,11 +28,10 @@ export default function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/logout" element={<Logout />} />
+				<Route path="/login" element={<Login />}></Route>
 
 				{/* UNPROTECTED */}
-				<Route path="/" element={<Unprotected />}>
-					<Route path="login" element={<Login />}></Route>
-				</Route>
+				<Route path="/" element={<Unprotected />}></Route>
 				<Route path="/" element={<Unprotected />}>
 					<Route path="register" element={<Register />}></Route>
 				</Route>
@@ -58,7 +62,6 @@ export default function App() {
 				<Route path="/" element={<Protected />}>
 					<Route path="/account" element={<Account />}></Route>
 				</Route>
-
 			</Routes>
 		</>
 	);
@@ -66,3 +69,19 @@ export default function App() {
 
 // <Route path="/terjual" element={<Terjual />}></Route>
 //<Route path="/wishlist" element={<Wishlist />}></Route>
+
+/*
+
+
+	
+			
+		
+		
+	
+		
+		
+			
+			
+		
+
+*/

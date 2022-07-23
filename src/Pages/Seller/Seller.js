@@ -80,15 +80,18 @@ const Buyer = () => {
                                         <h4 className="price">{/* Rp 250.000 */}
                                             Rp.
                                             {product.data.price}</h4>
+                                        
                                         <Button
                                             // href='/info'
                                             disabled={disable}
                                             className='button shadow-none button-terbitkan'
                                         // onClick={() => setAlertShow(true)}
                                         >
+                                            <Link to='/daftarjual' className='button-link'>
                                             <p className='btn-text'> Terbitkan </p>
-
+                                            </Link>
                                         </Button>
+                                        
                                         <Button
                                             //    href='/info'
                                             disabled={disable}

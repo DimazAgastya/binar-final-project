@@ -8,7 +8,7 @@ import StoreCities from '../../Components/store/storeCities'
 import Nav from '../../Components/Nav/Nav';
 // import Navbar from '../Components/Navbar/Navbar'
 import axios from 'axios'
-import { IoHeart } from 'react-icons/io5'
+import { HiStar } from 'react-icons/hi'
 import { IconContext } from 'react-icons/lib'
 import CarouselProduct from '../../Components/Carousel/CarouselProduct'
 
@@ -96,7 +96,7 @@ const Buyer = () => {
                                                     {product.data.name}
                                                 </h1>
                                                 <IconContext.Provider value={isWishlisted ? { color: "black" } : { color: "grey" }}>
-                                                    <IoHeart
+                                                    <HiStar
                                                         onClick={handleWishlist}
                                                     />
                                                 </IconContext.Provider>

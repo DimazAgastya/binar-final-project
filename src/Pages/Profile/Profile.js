@@ -2,7 +2,7 @@ import React from "react";
 import Profilepage from "../../Components/Profile/profile";
 import Nav from "../../Components/Nav/Nav";
 
-const profile = () => {
+const Profile = () => {
 	return (
 		<div>
 			<Nav />
@@ -11,4 +11,4 @@ const profile = () => {
 	);
 };
 
-export default profile;
+export default Profile;

@@ -1,32 +1,22 @@
 import React, { useState } from "react";
 import { FiEye } from "react-icons/fi";
-import "./login.css";
+import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import userSlice from "../../store/UserSlice";
 import axios from "axios";
-import jwtDecode from "jwt-decode";
 
 const LoginForm = () => {
 	const { register, handleSubmit, formState } = useForm();
 
-	// jika gagal login maka akan muncul pesan :
 	const [loginStatus, setLoginStatus] = useState({
 		success: false,
 		message: "",
-
-		/*
-			{!loginStatus.sucess && loginStatus.message && <p className="text-danger  m-0 ">{loginStatus.message}</p>}
-
-	*/
 	});
 
-	// dispatch axios
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
-
-	//menampilkan data  email dan password
 
 	const formSubmithandler = (data) => {
 		console.log(data);
@@ -37,7 +27,7 @@ const LoginForm = () => {
 		};
 
 		axios
-			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData) // kalau dah ready taruh link heroku disini
+			.post("https://finalsecondhand-staging.herokuapp.com/auth/login", postData)
 			.then((res) => {
 				// console.log(res);
 				localStorage.setItem("secondHandToken", res.data.token);
@@ -48,19 +38,14 @@ const LoginForm = () => {
 					localStorage.setItem("jwtToken", res.data.data.token);
 					localStorage.setItem("sessionCity", res.data.data.user.user_city);
 					localStorage.setItem("sessionImage", res.data.data.user.imageUrl);
+					dispatch(userSlice.actions.addUser(res.data.data));
 				}
-				navigate("/daftarJual");
-				// failed
-
-				dispatch(
-					userSlice.actions.addUser({
-						userData: res.data.accessToken,
-					})
-				);
+				navigate("/");
 			})
 			// failed register notification
 			.catch((err) => {
-				//	console.log(err.response);
+				console.log(err.response);
+
 				setLoginStatus({
 					success: false,
 					message: "Failed to Login, make sure your Account has been register",

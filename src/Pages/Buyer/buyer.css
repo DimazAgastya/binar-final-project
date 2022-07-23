@@ -293,6 +293,7 @@ body {
     border-radius: 16px;
     color: #ffffff;
     transition: none;
+    border-color: none;
   }
 
   .harga .button:hover {

@@ -1,12 +1,19 @@
 import React from "react";
 import "./daftarJual.css";
+import { Link } from "react-router-dom";
 
 const slider = () => {
 	return (
 		<div>
-			<button className="btn_swiper">Produk</button>
-			<button className="btn_swiper">Diminati</button>
-			<button className="btn_swiper">Terjual</button>
+			<Link to="/daftarjual">
+				<button className="btn_swiper">Produk</button>
+			</Link>
+			<Link to="/diminati">
+				<button className="btn_swiper">Diminati</button>
+			</Link>
+			<Link to="/terjual">
+				<button className="btn_swiper">Terjual</button>
+			</Link>
 		</div>
 	);
 };

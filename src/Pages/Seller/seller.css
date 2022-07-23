@@ -114,7 +114,14 @@ body {
 	border-radius: 16px;
 	flex-wrap: nowrap;
 	justify-content: center;
+  border-style: none;
 }
+
+.button-terbitkan a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .button-edit {
 	margin: auto;
 	margin-top: 14px !important;
@@ -131,6 +138,7 @@ body {
 	border-radius: 16px;
 	flex-wrap: nowrap;
 	justify-content: center;
+  border-color: #7f3bbf;
 }
 
 .harga .button:hover {
@@ -311,10 +319,6 @@ body {
 		border-radius: 16px;
 		color: #ffffff;
 		transition: none;
-	}
-	.button-terbitkan a {
-		color: #fff;
-		text-decoration: none;
 	}
 
 	.harga .button:hover {
