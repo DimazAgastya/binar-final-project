@@ -111,7 +111,7 @@ const ProfileForm = () => {
 						<div className="profile_photo_section">
 							<div {...getRootProps()} className="profile_dummy_dropzone" name="user_pict" id="user_pict">
 								<input {...getInputProps()} name="user_pict" id="user_pict" onChange={handleChange} />
-								<img src={ProfileData.foto_profil ? ProfileData.foto_profil : "./Img/uploadphoto.svg"} alt="" />
+								<img src={ProfileData.foto_profil ? ProfileData.foto_profil : ""} alt="" />
 
 								{<p className="text_small text-center mt-5">Or simply drop here</p>}
 							</div>

@@ -9,32 +9,37 @@ const SellerCategory = () => {
 		<div className="container category_container ">
 			<h5 className="text_reguler category_subHeader">Kategori</h5>
 
-			<div className="d-flex mb-3">
-				<FiBox className="icon_category_seller" alt="box" />
-				<p className="text_reguler category_text">Semua Produk</p>
-				<FiChevronRight alt="arrow right" className="icon_right" />
-			</div>
+			<Link to="/daftarjual">
+				<div className="d-flex mb-3">
+					<FiBox className="icon_category_seller" alt="box" />
+					<p className="text_reguler category_text">Semua Produk</p>
+					<FiChevronRight alt="arrow right" className="icon_right" />
+				</div>
+			</Link>
 			<hr></hr>
-			<div className="d-flex mb-3">
-				<GrFavorite className="icon_category_seller" alt="box" />
-				<p className="text_reguler category_text">Diminati</p>
-				<FiChevronRight alt="arrow right" className="icon_right_2" />
-			</div>
+			<Link to="/diminati">
+				<div className="d-flex mb-3">
+					<GrFavorite className="icon_category_seller" alt="box" />
+					<p className="text_reguler category_text">Diminati</p>
+					<FiChevronRight alt="arrow right" className="icon_right_2" />
+				</div>
+			</Link>
 			<hr></hr>
-
-			<div className="d-flex ">
-				<CgDollar className="icon_category_seller" alt="box" />
-				<p className="text_reguler category_text">Terjual</p>
-				<FiChevronRight alt="arrow right" className="icon_right_3" />
-			</div>
-
+			<Link to="/terjual">
+				<div className="d-flex ">
+					<CgDollar className="icon_category_seller" alt="box" />
+					<p className="text_reguler category_text">Terjual</p>
+					<FiChevronRight alt="arrow right" className="icon_right_3" />
+				</div>
+			</Link>
 			<hr></hr>
-
-			<div className="d-flex ">
-				<FiStar className="icon_category_seller" alt="box" />
-				<p className="text_reguler category_text">Wishlist</p>
-				<FiChevronRight alt="arrow right" className="icon_right_4" />
-			</div>
+			<Link to="/Wishlist">
+				<div className="d-flex ">
+					<FiStar className="icon_category_seller" alt="box" />
+					<p className="text_reguler category_text">Wishlist</p>
+					<FiChevronRight alt="arrow right" className="icon_right_4" />
+				</div>
+			</Link>
 		</div>
 	);
 };

@@ -9,6 +9,9 @@ import Register from "./Pages/Register/Register";
 import Auth from "./Pages/Auth/auth";
 import Account from "./Pages/Account/Account";
 import Profile from "./Pages/Profile/Profile";
+import Wishlist from "./Pages/Wishlist/Wishlist";
+import Terjual from "./Pages/Terjual/Terjual";
+// import Diminati from './Pages/Diminati/Diminati'
 
 import Buyer from "./Pages/Buyer/Buyer";
 import InfoPenawaran from "./Pages/InfoPenawaran/InfoPenawaran";
@@ -47,12 +50,11 @@ export default function App() {
 					<Route path="infoProduk" element={<InfoProduk />} />
 				</Route>
 				<Route path="/" element={<Protected />}>
-					<Route path="/daftarjual" element={<DaftarJual />}>
-						<Route path="semua" />
-						<Route path="diminati" element={<Diminati />} />
-						<Route path="terjual" />
-						<Route path="wishlist" />
-					</Route>
+					<Route path="/daftarjual" element={<DaftarJual />}></Route>
+					<Route path="semua" />
+					<Route path="/diminati" element={<Diminati />} />
+					<Route path="/terjual" element={<Terjual />} />
+					<Route path="/wishlist" element={<Wishlist />} />
 				</Route>
 				<Route path="/" element={<Protected />}>
 					<Route path="/buyer/:id" element={<Buyer />} />
@@ -66,22 +68,3 @@ export default function App() {
 		</>
 	);
 }
-
-// <Route path="/terjual" element={<Terjual />}></Route>
-//<Route path="/wishlist" element={<Wishlist />}></Route>
-
-/*
-
-
-	
-			
-		
-		
-	
-		
-		
-			
-			
-		
-
-*/
