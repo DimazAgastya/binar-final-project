@@ -19,7 +19,7 @@ import Seller from "./Pages/Seller/Seller";
 import Login from "./Pages/Login/Logins";
 import DaftarJual from "./Pages/DaftarJual/DaftarJual";
 import InfoProduk from "./Pages/InfoProduk/InfoProduk";
-import Logout from "./Components/Login/logout";
+import Logout from "./Components/Login/Logout";
 import Protected from "./Components/HOC/Protected";
 import Unprotected from "./Components/HOC/Unprotected";
 

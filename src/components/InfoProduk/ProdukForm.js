@@ -14,7 +14,7 @@ const ProdukForm = () => {
 					Harga Produk
 				</label>
 				<div>
-					<input type="text" name="Produk" id="Produk" required placeholder="Harga Produk" className="infoProduk_box"></input>
+					s<input type="text" name="Produk" id="Produk" required placeholder="Harga Produk" className="infoProduk_box"></input>
 				</div>
 				<label className="infoProduk_label" htmlFor="nama">
 					Kategori

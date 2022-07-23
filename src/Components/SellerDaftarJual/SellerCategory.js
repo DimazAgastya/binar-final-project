@@ -9,7 +9,7 @@ const SellerCategory = () => {
 		<div className="container category_container ">
 			<h5 className="text_reguler category_subHeader">Kategori</h5>
 
-			<Link to="/daftarjual">
+			<Link to="/daftarjual" className="seller_link">
 				<div className="d-flex mb-3">
 					<FiBox className="icon_category_seller" alt="box" />
 					<p className="text_reguler category_text">Semua Produk</p>
@@ -17,7 +17,7 @@ const SellerCategory = () => {
 				</div>
 			</Link>
 			<hr></hr>
-			<Link to="/diminati">
+			<Link to="/diminati" className="seller_link">
 				<div className="d-flex mb-3">
 					<GrFavorite className="icon_category_seller" alt="box" />
 					<p className="text_reguler category_text">Diminati</p>
@@ -25,7 +25,7 @@ const SellerCategory = () => {
 				</div>
 			</Link>
 			<hr></hr>
-			<Link to="/terjual">
+			<Link to="/terjual" className="seller_link">
 				<div className="d-flex ">
 					<CgDollar className="icon_category_seller" alt="box" />
 					<p className="text_reguler category_text">Terjual</p>
@@ -33,7 +33,7 @@ const SellerCategory = () => {
 				</div>
 			</Link>
 			<hr></hr>
-			<Link to="/Wishlist">
+			<Link to="/Wishlist" className="seller_link">
 				<div className="d-flex ">
 					<FiStar className="icon_category_seller" alt="box" />
 					<p className="text_reguler category_text">Wishlist</p>
